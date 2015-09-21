@@ -1,0 +1,259 @@
+@font-face {
+  font-family: 'Nevis-Bold';
+  src:url('../fonts/Nevis-Bold.ttf.woff') format('woff'),
+      url('../fonts/Nevis-Bold.ttf.svg#Nevis-Bold') format('svg'),
+      url('..fonts/Nevis-Bold.ttf.eot'),
+      url('..fonts.Nevis-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  color: black;
+  line-height: 1.25rem;
+  margin: 0px;
+  font-family: 'Nevis-Bold';
+}
+ 
+
+.logo {
+  float: right;
+  width: 50rem;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+svg {
+  width: 100%;
+}
+
+.center-text {
+  text-align: center;
+  font-family: 'Nevis-Bold';
+  font-size: 1rem;
+  margin-top: 40%;
+}
+  
+
+h1 {
+  font-size: 12rem;
+  line-height: 10rem;
+  font-family: 'Nevis-Bold';
+  color: black;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+  
+
+
+h2 {
+  font-size: 3.5rem;
+  line-height: 5.5rem;
+  font-family: 'Nevis-Bold';
+  color: black;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+  
+
+h5 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-family: 'Nevis-Bold';
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 10px 0 0 0;
+}
+
+p.small {
+  font-size: .7rem;
+  line-height: 1.7rem;
+}
+.text-right {
+  text-align: right;
+  padding-right: 50px;
+  margin-top: 10%;
+  position: absolute;
+  width: 100%;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  p {
+    color: white;
+  }
+  &:hover {
+    background-color: white;
+  }
+  p:hover p {
+    color: black;
+  }
+}
+  
+.text-left {
+  text-align: left;
+  background-color: black;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  h2 {
+    color: white;
+    padding-left: 20px;
+  }
+  p {
+    color: white;
+    padding: 50px 0;
+  }
+  &:hover {
+    background-color: white;
+    h2 {
+      color: black;
+    }
+    p {
+      color: black;
+    }
+  }  
+  p.small {
+    padding: 0 0 50px 0;
+  }
+}
+  
+.text-center {
+  text-align: center;
+}
+
+.half {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.text-area {
+  color: black;
+  font-family: 'Nevis Bold';
+  border-bottom: 3px solid black;
+  height: 50%;
+  margin-top: 10%;
+  overflow: scroll;
+  padding: 15px;
+}
+
+.text-wrap {
+  overflow: scroll;
+  font-family: 'Nevis Bold';
+  position: absolute;
+  height: 100%;
+  padding: 25px 25px 0px 7%;
+  font-size: 1.5rem;
+  line-height: 2.7rem;
+  width: 36%;
+  &:hover {
+    cursor: url('../images/WWclick.svg'), default !important;
+  }
+}
+  
+.liquid-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.back-card {
+  border: 3px solid black;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  bottom: 0px;
+  right: 0px;
+  transition-duration: .5s;
+  transition-timing-function: ease;
+  .card-1 {
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: none;
+    border-bottom: none;
+    position: absolute;
+    top: 10px;
+    bottom: 0px;
+    right: 0px;
+    left: 10px;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    .card-2 {
+      border-top: 3px solid black;
+      border-left: 3px solid black;
+      border-right: none;
+      border-bottom: none;
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      left: 10px;
+      bottom: 0px;
+      transition-duration: .5s;
+      transition-timing-function: ease;
+      .front-card {
+        border: 3px solid black;
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        border-right: none;
+        border-bottom: none;
+        background-color: white;
+        position: absolute;
+        right: 0px;
+        left: 10px;
+        bottom: 0px;
+        top: 10px;
+        padding: 20px 0 0 20px;
+        transition-duration: .5s;
+        transition-timing-function: ease;
+      }
+    }
+  } 
+}
+
+.back-card:hover {
+  cursor: pointer;
+  .card-1 {
+    top: 20px;
+    right: 0px;
+    left: 20px;
+    bottom: 0px;
+    &:hover {
+      top: 10px;
+      right: 0px;
+      left: 10px;
+      bottom: 0px;
+      cursor: pointer;
+      .card-2{
+        top: 20px;
+        right: 0px;
+        left: 20px;
+        bottom: 0px;
+        &:hover {
+          top: 10px;
+          right: 0px;
+          left: 10px;
+          bottom: 0px;
+          cursor: pointer;
+          .front-card{
+            top: 20px;
+            right: 0;
+            left: 20px;
+            bottom: 0px;
+            &:hover {
+              top: 10px;
+              right: 0px;
+              left: 10px;
+              bottom: 0px;
+              cursor: url('../images/WWsite_scroll.svg'), default;
+            }              
+          }            
+        }    
+      }     
+    }
+  }    
+}
+
+
