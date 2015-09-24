@@ -1,15 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	appName: "Wunder Werkz",
-	workClicked: false,
+  workClicked: false,
   aboutClicked: false,
   contactClicked: false,
 
   observesWork: function() {
     var _this = this;
     Ember.run.later((function() {
-  //do something in here that will run in 2 seconds
 
     if (_this.get('workClicked') && _this.get('aboutClicked') && _this.get('contactClicked') ) {
       console.log('go to about');
