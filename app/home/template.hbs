@@ -1,14 +1,6 @@
-<div class="back-card" id="back">
-  <div  class="card-1" id="card-one">
-    <div  class="card-2" id="card-two">
-      
-    </div>
-  </div>
-</div>
-
-<div {{action 'transitionToContact'}}>
-  <div {{action 'transitionToWork'}}>
-    <div {{action 'transitionToAbout'}}>
+<div class="back-card" id="back" {{action 'transitionToContact'}}>
+  <div  class="card-1" id="card-one" {{action 'transitionToWork'}}>
+    <div  class="card-2" id="card-two" {{action 'transitionToAbout'}}>
       <div class="front-card" id="front">
         <div class="text-right">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="824px" height="568px" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
@@ -49,3 +41,6 @@
     </div>
   </div>
 </div>
+
+
+
