@@ -325,42 +325,49 @@ p.small {
 
 
 .one {
-  top: 50px;
-  left: 50px;
+  top: 40px;
+  left: 40px;
   right: 0px;
   bottom: 0px;
   z-index: 400;
   cursor: url('../images/WWsite_scroll.svg'), default;
+  &.off {
+    top: 50px;
+    left: 50px;
+  }
 }
 .two {
-  // top: 30px;
-  // left: 30px;
-  top: 10px;
-  left: 10px;
+  top: 30px;
+  left: 30px;
   right: 0px;
   bottom: 0px;
   z-index: 300;
-  &:hover {
-    background-color: black;
+  &.off {
+    top: 40px;
+    left: 40px;
   }
 }
 .three {
-  // top: 20px;
-  // left: 20px;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
   right: 0px;
   bottom: 0px;
   z-index: 200;
+  &.off {
+    top: 30px;
+    left: 30px;
+  }
 }
 .four {
-  // top: 10px;
-  // left: 10px;
   top: 10px;
   left: 10px;
   right: 0px;
   bottom: 0px;
   z-index: 100;
+  &.off {
+    top: 20px;
+    left: 20px;
+  }
 }
 
 .card {
@@ -375,3 +382,82 @@ p.small {
 .content {
   z-index: 500;
 }
+
+
+.scroll {
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+}
+.work-wrapper {
+  width: 3200px;
+  height: 100%;
+  .image-wrap {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin-right: 100px;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    baackground-color: white;
+    padding: 50px;
+    img {
+      width: 100%;
+      height: auto;
+      opacity: 1;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+    }
+    &:hover {
+      cursor: none;
+    }
+    .caption {
+      font-family: 'Brandon Grotesque';
+      color: black;
+      display: none;
+      padding: 30px;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+    }
+    &:hover {
+      background-color: #E3F93B;
+      .caption {
+        display: table;
+        .caption-text {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+      img {
+        opacity: 0;
+      }
+    }
+      
+  }
+}
+
+.work-text {
+  position: fixed;
+  width: 240px;
+  bottom: 50%;
+  right: 20px;
+  z-index: 100;
+  text-align: right;
+  opacity: 1;
+  h5 {
+    text-transform: lowercase;
+    font-family: 'Brandon Grotesque';
+    line-height: 3rem;
+  }
+  &:hover {
+    opacity: 0;
+  }
+}
+  

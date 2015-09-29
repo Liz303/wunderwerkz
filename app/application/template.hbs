@@ -1,19 +1,27 @@
 {{!-- {{#link-to 'bar'}} BAR {{/link-to}}
 {{#link-to 'foo'}} FOO {{/link-to}} --}}
 {{!-- <div class="card one" {{action 'transitionToTwo'}} >
-</div>
+</div> --}}
+{{!-- 
 <div class="card two" {{action 'transitionToTwo'}}>
 </div>
 <div class="card three" {{action 'transitionToThree'}}>
 </div>
 <div class="card four" {{action 'transitionToFour'}}>
-</div>
+</div> --}}
+
+{{card-one transitionToTwo="transitionToTwo" }}
+{{card-two transitionToTwo="transitionToTwo"}}
+{{card-three transistionToThree="transitionToThree"}}
+{{card-four transitionToFour="transitionToFour"}}
+
+
 <div class="content">
 	{{liquid-outlet}}
 </div>
- --}}
 
-<div class="card four">
+
+{{!-- <div class="card four">
 	<div class="card three">
 		<div class="card two">
 	
@@ -25,3 +33,4 @@
 <div class="content">
 	{{liquid-outlet}}
 </div>
+ --}}

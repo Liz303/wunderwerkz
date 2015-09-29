@@ -7,6 +7,8 @@ export default Ember.Controller.extend({
     transitionToTwo: function() {
       if (this.currentRouteName == "home"){
         this.transitionToRoute('about');
+      } else if (this.currentRouteName == "about") {
+        this.transitionToRoute('work');
       }
     },
 

@@ -2,12 +2,18 @@ export default function() {
 	this.transition(
     this.fromRoute('home'),
     this.toRoute('about'),
-    this.use('fooBarTransition')
+    this.use('oneCardTransition')
   );
 
-this.transition(
-	this.fromRoute('foo'),
-	this.toRoute('bar'),
-	this.use('fooBarTransition')
-)
+  this.transition(
+  	this.fromRoute('about'),
+  	this.toRoute('work'),
+  	this.use('oneCardTransition')
+  );
+
+  this.transition(
+  	this.fromRoute('work'),
+  	this.toRoute('contact'),
+  	this.use('oneCardTransition')
+  );
 }
