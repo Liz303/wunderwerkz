@@ -7,8 +7,15 @@ export default Ember.View.extend({
 		var initialContent = container.html();
 
 		$('.one').html(initialContent);
-		debugger;
 		container.html('');
+		if ($('#map')){
+	    var location = document.getElementById('map');
+	  	var mapOptions = {
+	  		center: {lat: -25.363, lng: 131.044},
+	  		zoom: 8
+	  	};
+   		var map = new google.maps.Map(location, mapOptions);
+		}
 	}
 
 });
