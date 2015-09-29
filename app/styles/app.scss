@@ -316,3 +316,62 @@ p.small {
 .clear {
   opacity: 0;
 }
+
+
+
+
+
+//////
+
+
+.one {
+  top: 50px;
+  left: 50px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 400;
+  cursor: url('../images/WWsite_scroll.svg'), default;
+}
+.two {
+  // top: 30px;
+  // left: 30px;
+  top: 10px;
+  left: 10px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 300;
+  &:hover {
+    background-color: black;
+  }
+}
+.three {
+  // top: 20px;
+  // left: 20px;
+  top: 10px;
+  left: 10px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 200;
+}
+.four {
+  // top: 10px;
+  // left: 10px;
+  top: 10px;
+  left: 10px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+}
+
+.card {
+  border: 3px solid black;
+  background-color: white;
+  position: absolute;
+  color: black;
+  transition-duration: .2s;
+  transition-timing-function: ease;
+}
+
+.content {
+  z-index: 500;
+}
