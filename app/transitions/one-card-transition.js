@@ -13,7 +13,7 @@ export default function oneCardTransition() {
         return slideCardIn().then(() => {
           $('.one').html('');
           $('.card.one').removeClass('one').addClass('back');
-          $('.card.two').removeClass('two').addClass('one');
+          $('.card.two').removeClass('two').addClass('one').css('z-index', 400);
           $('.card.three').removeClass('three').addClass('two');
           $('.card.four').removeClass('four').removeClass('back').addClass('three');
           $('.card.back').addClass('four');
