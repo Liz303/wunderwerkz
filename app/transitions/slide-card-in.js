@@ -1,4 +1,5 @@
 import { isAnimating, finish, timeSpent, animate, stop } from "liquid-fire";
+import Ember from 'ember';
 
 export default function slideCardIn() {
 	console.log('slide card in');

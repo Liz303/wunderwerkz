@@ -16,4 +16,10 @@ export default function() {
   	this.toRoute('contact'),
   	this.use('oneCardTransition')
   );
+
+  this.transition(
+    this.fromRoute('contact'),
+    this.toRoute('home'),
+    this.use('oneCardTransition')
+  );
 }

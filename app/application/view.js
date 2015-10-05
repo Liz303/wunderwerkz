@@ -18,7 +18,8 @@ export default Ember.View.extend({
 
 		$('.one').html(initialContent);
 		container.html('');
-		if ($('#map')){
+		if ($('#map').length > 0){
+			debugger;
 			var customMapType = new google.maps.StyledMapType([
 			 {
 			    stylers: [

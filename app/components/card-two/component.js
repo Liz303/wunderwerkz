@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 	click(){
 		this.sendAction('transitionToTwo');
+		console.log('click-two');
 	}, 
 	mouseEnter(event) {
 		$('.two').removeClass('off');
