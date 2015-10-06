@@ -175,7 +175,7 @@ p.small {
   height: 100%; 
 }
 
-.back-card {
+.four {
   border: 3px solid black;
   position: absolute;
   top: 7px;
@@ -185,7 +185,7 @@ p.small {
   transition-duration: .2s;
   transition-timing-function: ease;
   background-color: white;
-  .card-1 {
+  .three {
     border-top: 3px solid black;
     border-left: 3px solid black;
     border-right: none;
@@ -198,7 +198,7 @@ p.small {
     transition-duration: .2s;
     transition-timing-function: ease;
     background-color: white;
-    .card-2 {
+    .two {
       border-top: 3px solid black;
       border-left: 3px solid black;
       border-right: none;
@@ -211,7 +211,7 @@ p.small {
       transition-duration: .2s;
       transition-timing-function: ease;
       background-color: white;
-      .front-card {
+      .one {
         border: 3px solid black;
         border-top: 3px solid black;
         border-left: 3px solid black;
@@ -232,9 +232,9 @@ p.small {
   } 
 }
 
-.back-card:hover {
+.four:hover {
   cursor: pointer;
-  .card-1 {
+  .three {
     top: 20px;
     right: 0px;
     left: 20px;
@@ -245,7 +245,7 @@ p.small {
       left: 10px;
       bottom: 0px;
       cursor: pointer;
-      .card-2{
+      .two{
         top: 20px;
         right: 0px;
         left: 20px;
@@ -256,7 +256,7 @@ p.small {
           left: 10px;
           bottom: 0px;
           cursor: pointer;
-          .front-card{
+          .one{
             top: 20px;
             right: 0;
             left: 20px;
@@ -337,51 +337,51 @@ p.small {
 //////
 
 
-.one {
-  top: 40px;
-  left: 40px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 400;
-  cursor: url('../images/WWsite_scroll.svg'), default;
-  &.off {
-    top: 50px;
-    left: 50px;
-  }
-}
-.two {
-  top: 30px;
-  left: 30px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 300 !important;
-  &.off {
-    top: 40px;
-    left: 40px;
-  }
-}
-.three {
-  top: 20px;
-  left: 20px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 200 !important;
-  &.off {
-    top: 30px;
-    left: 30px;
-  }
-}
-.four {
-  top: 10px;
-  left: 10px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 100 !important;
-  &.off {
-    top: 20px;
-    left: 20px;
-  }
-}
+// .one {
+//   top: 10px;
+//   left: 10px;
+//   right: 0px;
+//   bottom: 0px;
+//   z-index: 400;
+//   cursor: url('../images/WWsite_scroll.svg'), default;
+//   &.off {
+//     top: 10px;
+//     left: 10px;
+//   }
+// }
+// .two {
+//   top: 10px;
+//   left: 10px;
+//   right: 0px;
+//   bottom: 0px;
+//   z-index: 300 !important;
+//   &.off {
+//     top: 10px;
+//     left: 10px;
+//   }
+// }
+// .three {
+//   top: 10px;
+//   left: 10px;
+//   right: 0px;
+//   bottom: 0px;
+//   z-index: 200 !important;
+//   &.off {
+//     top: 10px;
+//     left: 10px;
+//   }
+// }
+// .four {
+//   top: 10px;
+//   left: 10px;
+//   right: 0px;
+//   bottom: 0px;
+//   z-index: 100 !important;
+//   &.off {
+//     top: 20px;
+//     left: 20px;
+//   }
+// }
 
 .card {
   border: 3px solid black;
