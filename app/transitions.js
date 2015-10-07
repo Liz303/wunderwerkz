@@ -2,7 +2,8 @@ export default function() {
 	this.transition(
     this.fromRoute('home'),
     this.toRoute('about'),
-    this.use('oneCardTransition')
+    this.use('oneCardTransition'), 
+    this.reverse('oneCardReverse')
   );
 
   this.transition(
