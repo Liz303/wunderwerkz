@@ -8,18 +8,17 @@ import fadeOutOldCards from './transitionOneReverse/fade-out-old-cards';
 
 export default function oneCardReverse() {
   var oldElement = this.oldElement;
-console.log('one card Reverse');
   return slideCardsOut.apply(this).then(() => {
-    debugger;
     return fadeOutNewCards.apply(this).then(() => {
-      debugger;
       return slideCardIn.apply(this).then(() => {
-        debugger;
         return fadeInNewCards.apply(this).then(() => {
-          debugger;
           return fadeOutOldCards.apply(this).then(() => {
-            debugger;
-            return Ember.RSVP.resolve();
+               
+            return Ember.RSVP.hash({
+               textTwo: this.newElement.find('.two .sidebar-text').css('display', 'block'),
+                textThree: this.newElement.find('.three .sidebar-text').css('display', 'block'),
+                 textFour: this.newElement.find('.four .sidebar-text').css('display', 'block'),
+            });
           });
         });
       });
