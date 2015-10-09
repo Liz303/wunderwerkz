@@ -13,7 +13,9 @@ export default Ember.Component.extend({
   ],
 
   didInsertElement() {
-    this.initMap();
+    // Ember.run.later((function(){
+      this.initMap();
+    // }), 2000);
   },
 
   initMap(){

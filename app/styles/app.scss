@@ -90,16 +90,12 @@ p.small {
 .text-right {
   text-align: right;
   padding-right: 50px;
-  margin-top: 10%;
   position: absolute;
   width: 100%;
   transition-duration: 1s;
   transition-timing-function: ease;
   p {
     color: white;
-  }
-  &:hover {
-    background-color: white;
   }
   p:hover p {
     color: black;
@@ -108,7 +104,7 @@ p.small {
   
 .text-left {
   text-align: left;
-  background-color: black;
+  background-color: #00FFEC;
   transition-duration: 1s;
   transition-timing-function: ease;
   h2 {
@@ -134,7 +130,7 @@ p.small {
 }
 
 .half {
-  width: 50%;
+  width: 49.5%;
   height: 100%;
   float: left;
 }
@@ -151,7 +147,6 @@ p.small {
 
 .text-wrap {
   overflow: scroll;
-  font-family: 'Nevis Bold';
   position: absolute;
   height: 100%;
   padding: 25px 25px 0px 7%;
@@ -176,12 +171,12 @@ p.small {
 }
 
 .four {
-  border-top: 3px solid black;
+  border-top: none;
   border-left: 3px solid black;
   border-right: none;
   border-bottom: none;
   position: absolute;
-  top: 7px;
+  top: 0px;
   left: 0;
   bottom: 0px;
   right: 0px;
@@ -189,12 +184,12 @@ p.small {
   transition-timing-function: ease;
   background-color: white;
   .three {
-    border-top: 3px solid black;
+    border-top: none;
     border-left: 3px solid black;
     border-right: none;
     border-bottom: none;
     position: absolute;
-    top: 10px;
+    top: 0px;
     bottom: 0px;
     right: 0px;
     left: 10px;
@@ -202,12 +197,12 @@ p.small {
     transition-timing-function: ease;
     background-color: white;
     .two {
-      border-top: 3px solid black;
+      border-top: none;
       border-left: 3px solid black;
       border-right: none;
       border-bottom: none;
       position: absolute;
-      top: 10px;
+      top: 0px;
       right: 0px;
       left: 10px;
       bottom: 0px;
@@ -215,8 +210,7 @@ p.small {
       transition-timing-function: ease;
       background-color: white;
       .one {
-        border: 3px solid black;
-        border-top: 3px solid black;
+        border-top: none;
         border-left: 3px solid black;
         border-right: none;
         border-bottom: none;
@@ -225,11 +219,12 @@ p.small {
         right: 0px;
         left: 10px;
         bottom: 0px;
-        top: 10px;
-        padding: 20px 0 0 20px;
+        top: 0px;
+        padding: 0px 0 0 10px;
         transition-duration: .2s;
         transition-timing-function: ease;
         background-color: white;
+        z-index: 100;
       }
     }
   } 
@@ -238,35 +233,35 @@ p.small {
 .four:hover {
   cursor: pointer;
   .three {
-    top: 20px;
+    top: 0px;
     right: 0px;
     left: 20px;
     bottom: 0px;
     &:hover {
-      top: 10px;
+      top: 0px;
       right: 0px;
       left: 10px;
       bottom: 0px;
       cursor: pointer;
       .two{
-        top: 20px;
+        top: 0px;
         right: 0px;
         left: 20px;
         bottom: 0px;
         &:hover {
-          top: 10px;
+          top: 0px;
           right: 0px;
           left: 10px;
           bottom: 0px;
           cursor: pointer;
           .one{
-            top: 20px;
+            top: 0px;
             right: 0;
             left: 20px;
             bottom: 0px;
             cursor: url('../images/WWsite_scroll.svg'), default;
             &:hover {
-              top: 10px;
+              top: 0px;
               right: 0px;
               left: 10px;
               bottom: 0px;
@@ -418,7 +413,7 @@ p.small {
     margin-right: 100px;
     transition-duration: 1s;
     transition-timing-function: ease;
-    baackground-color: white;
+    background-color: white;
     padding: 50px;
     img {
       width: 100%;
@@ -431,7 +426,6 @@ p.small {
       cursor: none;
     }
     .caption {
-      font-family: 'Brandon Grotesque';
       color: black;
       display: none;
       padding: 30px;
@@ -443,7 +437,7 @@ p.small {
       height: 100%;
     }
     &:hover {
-      background-color: #E3F93B;
+      background-color: #00FFEC;
       .caption {
         display: table;
         .caption-text {
@@ -469,24 +463,29 @@ p.small {
   opacity: 1;
   h5 {
     text-transform: lowercase;
-    font-family: 'Brandon Grotesque';
-    line-height: 3rem;
+    line-height: 2rem;
   }
   &:hover {
     opacity: 0;
   }
 }
   
+// .map-wrapper {
+//   width: 50%;
+//   height: 600px;
+// }
 #map {
   height: 600px;
-  width: 600px;
+  width: 45%;
   z-index: 600;
   margin: 30px;
   float: left;
 }
 
 .map-text {
-  margin: 30px;
+  margin: 0;
+  float: left;
+  width: 45%;
 }
 .card-one {
   height: 100%;
@@ -524,13 +523,26 @@ a {
   }
 }
 
-.sidebar {
-  background-color: black;
-      position: fixed;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    width: 39px;
-    box-shadow: -10px 0px 31px grey;
-    z-index: 10000;
+// .sidebar {
+//   background-color: black;
+//       position: fixed;
+//     right: 0;
+//     bottom: 0;
+//     top: 0;
+//     width: 39px;
+//     box-shadow: -10px 0px 31px grey;
+//     z-index: 10000;
+// }
+
+.sidebar-text {
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.sidebar-text-one {
+  margin-left: 0px;
+  font-size: 10px;
+  text-transform: uppercase;
+  float: left;
 }

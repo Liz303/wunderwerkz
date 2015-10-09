@@ -32,10 +32,10 @@ module.exports = function(environment) {
   // }};
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
-    'script-src': "'self' 'unsafe-eval' *.googleapis.com maps.gstatic.com maps.googleapis.com maps.gstatic.com",
+    'script-src': "'self' 'unsafe-eval' https://api.instagram.com *.googleapis.com maps.gstatic.com maps.googleapis.com maps.gstatic.com",
     'font-src': "'self' fonts.gstatic.com",
     'connect-src': "'self' maps.gstatic.com",
-    'img-src': "'self' *.googleapis.com maps.gstatic.com csi.gstatic.com data: image/webp",
+    'img-src': "'self' scontent.cdninstagram.com *.googleapis.com maps.gstatic.com csi.gstatic.com data: image/webp",
     'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maps.gstatic.com"
   };
 
