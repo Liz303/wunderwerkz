@@ -8,12 +8,11 @@ import newContentNoBorder from './transitionOne/new-content-no-border';
 
 export default function oneCardTransition() {
   var oldElement = this.oldElement;
-
+console.log('one card trasition');
   return newContentNoBorder.apply(this).then(() => {
     return newContentIn.apply(this).then(() => {
-      return fadeOutOldCards.apply(this).then(() => {  
+      return fadeOutOldCards.apply(this).then(() => {    
         return cardOffScreen.apply(this).then(() => {   
-          // this.newElement.find('.four').css({'border-top': '3px solid black', 'border-left': '3px solid black'});
           return slideCardsDown.apply(this).then(() => {
             return Ember.RSVP.resolve();
           });
