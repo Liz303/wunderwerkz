@@ -20,7 +20,31 @@ body {
   font-family: 'Nevis-Bold';
   height: 100%
 }
+ .four .three .two .home.one.z-hover {
+  background: url('http://31.media.tumblr.com/e4721aed8cc2566ae0c13bfe4978f05f/tumblr_ntpc17aqyu1u7leb2o1_400.gif') no-repeat;
+  background-size: 100%;
+}
+
+@keyframes hideshow_one {
+  0% { opacity: 0; }
+  25% {opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes hideshow_two {
+  0% { opacity: 0; }
+  50% {opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.letter-part {
+  animation: hideshow_one 5s ease;
+}
  
+ .letter-part-two {
+  animation: hideshow_two 5s ease;
+}
+
 .clearfix {
   clear: both;
   overflow: hidden;
@@ -163,15 +187,22 @@ svg {
     top: 0;
     left: 0;
   path {
-    fill: #00FFEC;
+    fill: #000;
     &:hover {
       fill: #FFFFFF;
     }
   }
   polygon {
+    fill: #000;
+    &:hover {
+      fill: #FFFFFF;
+    }
+  }
+  polygon.z-slash {
     fill: #00FFEC;
     &:hover {
       fill: #FFFFFF;
+      cursor: pointer;
     }
   }
 }
@@ -179,8 +210,8 @@ svg {
 .svg-container {
   width: 90%;
   height: 0;
-  margin-top: -150px;
   position: relative;
+  margin: 10% 5% 0 0;
 }
 .liquid-container {
   position: absolute;
