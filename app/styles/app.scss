@@ -21,8 +21,23 @@ body {
   height: 100%
 }
  .four .three .two .home.one.z-hover {
-  background: url('http://31.media.tumblr.com/e4721aed8cc2566ae0c13bfe4978f05f/tumblr_ntpc17aqyu1u7leb2o1_400.gif') no-repeat;
-  background-size: 100%;
+  background: url('http://31.media.tumblr.com/e4721aed8cc2566ae0c13bfe4978f05f/tumblr_ntpc17aqyu1u7leb2o1_400.gif') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}
+
+.four .three .two .home.one.z-hover-two {
+  background: url('http://ak-hdl.buzzfed.com/static/enhanced/webdr02/2013/7/15/15/anigif_enhanced-buzz-16460-1373917955-9.gif') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
 
 @keyframes hideshow_one {
@@ -37,13 +52,42 @@ body {
   100% { opacity: 1; }
 }
 
+@keyframes hideshow_three {
+  0% { opacity: 0; }
+  50% {opacity: 0;}
+  75% {opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+@keyframes hideshow_four {
+  0% { opacity: 0; }
+  50% {opacity: 1;}
+}
+
+@keyframes hideshow_five {
+  0% { opacity: 0; }
+  50% {opacity: 1;}
+  75% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .letter-part {
   animation: hideshow_one 5s ease;
 }
  
- .letter-part-two {
+.letter-part-two {
   animation: hideshow_two 5s ease;
 }
+
+.letter-part-three {
+  animation: hideshow_three 3s ease;
+}
+
+.letter-part-three {
+  animation: hideshow_four 3s ease;
+}
+
 
 .clearfix {
   clear: both;
@@ -200,6 +244,7 @@ svg {
   }
   polygon.z-slash {
     fill: #00FFEC;
+    animation: hideshow_five 5s infinite alternate;
     &:hover {
       fill: #FFFFFF;
       cursor: pointer;
@@ -208,10 +253,15 @@ svg {
 }
 
 .svg-container {
-  width: 90%;
-  height: 0;
-  position: relative;
-  margin: 10% 5% 0 0;
+  width: 80%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 .liquid-container {
   position: absolute;
@@ -528,4 +578,166 @@ a {
   font-size: 10px;
   text-transform: uppercase;
   float: left;
+}
+
+.phone-text {
+  display: none;
+}
+@media (max-width: 480px) {
+  .four {
+    left: 3px;
+    .three {
+      left: 3px;
+      .two {
+        left: 3px;
+        .one {
+          left: 3px;
+        &.about {
+          background-color: #00FFEC;
+          height: 100%;
+          overflow: scroll;
+          }
+        }
+      }
+    }
+  }
+  .four:hover {
+    .three {
+      left: 3px;
+      &:hover {
+        left: 3px;
+        .two{
+          left: 3px;
+          &:hover {
+            left: 3px;
+            .one{
+              left: 3px;
+              &:hover {
+                left: 3px;
+              }              
+            }            
+          }    
+        }     
+      }
+    }    
+  }
+  .four .three .two .card.one.work {
+     background-color: #FFFFFF;
+  }
+  .half {
+      width: 100%;
+      background-color: #00FFEC;
+      float: none;
+      height: auto;
+    }
+  h2 {
+    margin-top: 100px; 
+    font-size: 3rem;
+    line-height: 4.5rem;
+    }
+  .text-wrap {
+    padding: 0 8%;
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    width: 89%;
+    position: relative;
+    }
+  .text-left .text-wrap p {
+    padding: 0;
+  }
+  .map-wrapper {
+    display: none;
+  }
+  .map-text {
+    display: none;
+  }
+  .contact {
+    h3 {
+      display: none;
+    }
+  }
+  .text-left:hover {
+    background-color: #00FFEC;
+  }
+  .work-wrapper .image-wrap {
+    padding: 50px 0;
+  }
+  .title {
+    display: none;
+
+  }
+  .phone-text {
+    display: block;
+    margin: 0;
+    float: left;
+    width: 92%;
+    padding-left: 20px;
+  }
+  .svg-container {
+    width: 78%;
+  }
+}
+
+@media (max-width: 768px) {
+  .four:hover {
+    .three {
+      left: 10px;
+      &:hover {
+        left: 10px;
+        .two{
+          left: 10px;
+          &:hover {
+            left: 10px;
+            .one{
+              left: 10px;
+              &:hover {
+                left: 10px;
+              }              
+            }            
+          }    
+        }     
+      }
+    }  
+  }  
+  .four .three .two .one.about {
+    background-color: #00FFEC;
+    height: 100%;
+    overflow: scroll;   
+  }
+   .four .three .two .card.one.work {
+     background-color: #FFFFFF;
+  }
+  .half {
+      width: 100%;
+      background-color: #00FFEC;
+      float: none;
+      height: auto;
+    }
+  h2 {
+    margin-top: 100px; 
+    font-size: 5rem;
+    line-height: 6.5rem;
+    }
+  .text-wrap {
+    padding: 20px;
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    width: 89%;
+    position: relative;
+    }
+  .text-left .text-wrap p {
+    padding: 0;
+  }
+  #map {
+    height: 600px;
+    width: 92%;
+    z-index: 600;
+    margin: 20px;
+    float: left;
+  }
+  .map-text {
+    margin: 20px;
+    float: left;
+    width: 100%;
+  } 
 }

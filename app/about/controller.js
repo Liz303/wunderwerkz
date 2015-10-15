@@ -4,27 +4,45 @@ export default Ember.Controller.extend({
   twoClicked: false,
   threeClicked: false,
   fourClicked: false,
+  stopTransition: false,
 
   observesClicks: function() {
     Ember.run.later((function() {
-    if (this.get('threeClicked') && this.get('twoClicked') && this.get('fourClicked') ) {
-      this.set('threeClicked', false);
-      this.set('twoClicked', false);
-      this.set('fourClicked', false);
-       this.transitionToRoute('work');
+    if (this.get('threeClicked') && this.get('twoClicked') && this.get('fourClicked') && this.get('stopTransition')){
+        this.set('threeClicked', false);
+        this.set('twoClicked', false);
+        this.set('fourClicked', false);
+        this.set('stopTransition', false);
+    } else if (this.get('threeClicked') && this.get('twoClicked') && this.get('fourClicked') ) {
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        this.transitionToRoute('work');
+      } else {
+        this.set('threeClicked', false);
+        this.set('twoClicked', false);
+        this.set('fourClicked', false);
+        this.transitionToRoute('work');
+      }
     } else if (this.get('threeClicked') && this.get('fourClicked')) {
-      this.set('threeClicked', false);
-      this.set('twoClicked', false);
-      this.set('fourClicked', false);
-       this.transitionToRoute('contact');
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        this.transitionToRoute('work');
+      } else {
+        this.set('threeClicked', false);
+        this.set('twoClicked', false);
+        this.set('fourClicked', false);
+        this.transitionToRoute('contact');
+      }
     } else if (this.get('fourClicked')) {
-      this.set('threeClicked', false);
-      this.set('twoClicked', false);
-      this.set('fourClicked', false);
-       this.transitionToRoute('home');
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        this.transitionToRoute('work');
+      } else {
+        this.set('threeClicked', false);
+        this.set('twoClicked', false);
+        this.set('fourClicked', false);
+        this.transitionToRoute('home');
+      }
     }
     }.bind(this)), 100);
-  }.observes('threeClicked', 'twoClicked', 'fourClicked'),
+  }.observes('threeClicked', 'twoClicked', 'fourClicked', 'dontTransition'),
 
   actions: {
     transitionToTwo() {
@@ -36,5 +54,11 @@ export default Ember.Controller.extend({
     transitionToFour() {
       this.set('fourClicked', true);
     },
+    dontTransition() {
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        console.log('stop');
+        this.set('stopTransition', true);
+      }
+    }
   }
 });

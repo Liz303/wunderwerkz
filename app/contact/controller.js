@@ -14,20 +14,32 @@ export default Ember.Controller.extend({
           this.set('twoClicked', false);
           this.set('fourClicked', false);
         } else if (this.get('threeClicked') && this.get('twoClicked') && this.get('fourClicked') ) {
-          this.set('threeClicked', false);
-          this.set('twoClicked', false);
-          this.set('fourClicked', false);
-           this.transitionToRoute('home');
+          if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            this.transitionToRoute('home');
+          } else {
+              this.set('threeClicked', false);
+              this.set('twoClicked', false);
+              this.set('fourClicked', false);
+             this.transitionToRoute('home');
+          }
         } else if (this.get('threeClicked') && this.get('fourClicked')) {
-          this.set('threeClicked', false);
-          this.set('twoClicked', false);
-          this.set('fourClicked', false);
-           this.transitionToRoute('about');
+          if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            this.transitionToRoute('home');
+          } else {
+            this.set('threeClicked', false);
+            this.set('twoClicked', false);
+            this.set('fourClicked', false);
+            this.transitionToRoute('about');
+         }
         } else if (this.get('fourClicked')) {
-          this.set('threeClicked', false);
-          this.set('twoClicked', false);
-          this.set('fourClicked', false);
-           this.transitionToRoute('work');
+          if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            this.transitionToRoute('home');
+          } else {
+            this.set('threeClicked', false);
+            this.set('twoClicked', false);
+            this.set('fourClicked', false);
+            this.transitionToRoute('work');
+          }
         }
       }.bind(this)), 100);
     

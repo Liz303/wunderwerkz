@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	appName: "Wunder Werkz",
-
   actions: {
     transitionToTwo: function() {
       if (this.currentRouteName == "home"){
@@ -18,7 +17,6 @@ export default Ember.Controller.extend({
     },
 
     transitionToThree: function() {
-      debugger;
       if (this.currentRouteName == "home"){
         this.transitionToRoute('work');
       } if (this.currentRouteName == "work" && this.get('hasTransitioned')) {
@@ -29,7 +27,6 @@ export default Ember.Controller.extend({
     },
 
     transitionToFour: function() {
-      debugger;
       if (this.currentRouteName == "home" && this.get('hasTransitioned')){
         this.transitionToRoute('about');
       } 
