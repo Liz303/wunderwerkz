@@ -35,7 +35,7 @@ module.exports = function(environment) {
     'script-src': "'self' 'unsafe-eval' 'unsafe-inline' https://api.instagram.com *.googleapis.com maps.gstatic.com maps.googleapis.com maps.gstatic.com",
     'font-src': "'self' fonts.gstatic.com",
     'connect-src': "'self' maps.gstatic.com",
-    'img-src': "'self' scontent.cdninstagram.com *.googleapis.com maps.gstatic.com csi.gstatic.com data: image/webp",
+    'img-src': "'self' ak-hdl.buzzfed.com/* scontent.cdninstagram.com *.googleapis.com maps.gstatic.com csi.gstatic.com data: image/webp",
     'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maps.gstatic.com"
   };
 
