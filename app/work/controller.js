@@ -17,6 +17,7 @@ export default Ember.Controller.extend({
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
           this.transitionToRoute('contact');
         } else {
+        $('.work-text').css('position', 'absolute');
         this.set('threeClicked', false);
         this.set('twoClicked', false);
         this.set('fourClicked', false);
@@ -26,6 +27,7 @@ export default Ember.Controller.extend({
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
           this.transitionToRoute('contact');
         } else {
+          $('.work-text').css('position', 'absolute');
           this.set('threeClicked', false);
           this.set('twoClicked', false);
           this.set('fourClicked', false);
@@ -35,6 +37,7 @@ export default Ember.Controller.extend({
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
           this.transitionToRoute('contact');
         } else {
+          $('.work-text').css('position', 'absolute');
           this.set('threeClicked', false);
           this.set('twoClicked', false);
           this.set('fourClicked', false);

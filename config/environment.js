@@ -27,9 +27,6 @@ module.exports = function(environment) {
   //   'object-src': "'self"
   // };
 
-  // ENV.googleMap = {
-  //   apiKey: AIzaSyD1ehSxlBtzHcYOtth9XmMyPrlbI0P0U4E
-  // }};
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
     'script-src': "'self' 'unsafe-eval' 'unsafe-inline' https://api.instagram.com *.googleapis.com maps.gstatic.com maps.googleapis.com maps.gstatic.com",

@@ -9,10 +9,11 @@ export default Ember.Controller.extend({
   observesClicks: function() {
       Ember.run.later((function() {
         if (this.get('threeClicked') && this.get('twoClicked') && this.get('fourClicked') && this.get('stopTransition')){
-          this.set('stopTransition', false);
+          // this.set('stopTransition', false);
           this.set('threeClicked', false);
           this.set('twoClicked', false);
           this.set('fourClicked', false);
+          this.transitionToRoute('home');
         } else if (this.get('threeClicked') && this.get('twoClicked') && this.get('fourClicked') ) {
           if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             this.transitionToRoute('home');
@@ -47,7 +48,6 @@ export default Ember.Controller.extend({
 
   actions: {
     transitionToTwo() {
-      console.log('two');
       this.set('twoClicked', true);
     },
     transitionToThree() {
@@ -57,7 +57,6 @@ export default Ember.Controller.extend({
       this.set('fourClicked', true);
     },
     dontTransition() {
-      console.log('dont');
       this.set('stopTransition', true);
     }
   }
