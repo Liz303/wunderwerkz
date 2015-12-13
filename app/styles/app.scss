@@ -67,9 +67,10 @@ body {
 
 @keyframes hideshow_five {
   0% { opacity: 0; }
-  50% {opacity: 1;}
-  75% {opacity: 0;}
-  100% {opacity: 1;}
+  25% {opacity: 1}
+  50% {opacity: 0;}
+  75% {opacity: 1;}
+  100% {opacity: 0;}
 }
 
 .letter-part {
@@ -181,7 +182,7 @@ p.small {
   }
   p {
     color: white;
-    padding: 50px 0;
+    padding: 0;
   }
   &:hover {
     background-color: white;
@@ -202,7 +203,17 @@ p.small {
   height: 100%;
   float: left;
 }
-
+.contact-half {
+  margin: 100px 0;
+  p {
+    margin-top: 0;
+  }
+  h2 {
+  margin: 0 50px;
+  font-size: 6.5rem;
+  line-height: 9.5rem;
+  }
+}
 .text-area {
   color: black;
   font-family: 'Nevis Bold';
@@ -236,6 +247,14 @@ svg {
     left: 0;
   path {
     fill: #000;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
+     -webkit-transition-property: fill;
+    -moz-transition-property: fill;
+    -o-transition-property: fill;
+    transition-property: fill;
     &:hover {
       fill: #FFFFFF;
     }
@@ -371,10 +390,14 @@ svg {
             right: 0;
             left: 20px;
             bottom: 0px;
-            cursor: -webkit-image-set(
-                url('../images/WW_click_2.png') 1x,
-                url('../images/WW_click_3.png') 2x
-              ), auto;
+            cursor: auto;
+            // cursor:  url(../images/Cursor.svg) 4 12, auto;
+            cursor: url('../images/WW_click_2.png') 25 15, auto;
+            // cursor: url('../images/WW_click_2.png'), auto !important;
+            // cursor: -webkit-image-set(
+            //     url('../images/WW_click_2.png') 1x,
+            //     url('../images/WW_click_3.png') 2x
+            //   ), auto;
             &:hover {
               top: 0px;
               right: 0px;
@@ -447,6 +470,10 @@ svg {
 .work-wrapper {
   width: 2000px;
   height: 100%;
+  overflow: scroll;
+  position: absolute;
+  top: 0;
+  left: 20px;
   .image-wrap {
     display: inline;
     position: relative;
@@ -511,6 +538,7 @@ svg {
   }
   &:hover {
     opacity: 0;
+    cursor: none;
   }
 }
   
@@ -751,4 +779,46 @@ a {
     float: left;
     width: 100%;
   } 
+}
+
+div { 
+  height: 100%;
+}
+.vertical-scroll {
+  width: 33%;
+  margin-top: 0;
+  float: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  font-size: 200px;
+  line-height: 200px;
+  text-align: center;
+  background-color: #00FFEC;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  p.small-text {
+    font-size: 70px;
+    line-height: 20px;
+    height: auto;
+    margin-top: 50px;
+  }
+  p {
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+
+  }
+  p.vertical-text {
+    transform: rotate(90deg);
+  transform-origin: left top 0;
+  }
+  &:hover {
+    background-color: #FFF;
+    cursor: url('../images/WW_scroll_2.png'), auto !important;
+    cursor: -webkit-image-set(
+        url('../images/WW_scroll_2.png') 1x,
+        url('../images/WW_scroll_3.png') 2x
+      ), auto;
+  }
 }
