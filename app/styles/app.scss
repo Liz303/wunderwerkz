@@ -94,15 +94,16 @@ body {
   0% { top: 50%; right: 50%; }
   25% {top: 75%; right: 75%;}
   50% {top: 100%; right: 100%;}
-  75% {top: 0%; right: 0%;}
+  75% {top:  50%; right: 22%;}
   100% {top: 25%; right: 25%;}
 }
 
 @keyframes triangle-seven-float {
   0% { bottom: 50%; left: 50%; }
-  25% {bottom: 75%; left: 0%;}
-  50% {bottom: 100%; left: 100%;}
-  75% {bottom: 0%; left: 0%;}
+  20% {bottom: 25%; left: 0%;}
+  40% {bottom: 50%; left: 100%;}
+  60% {bottom: 25%; left: 0%;}
+  80%  {bottom: 50%; left: 50%;}
   100% {bottom: 25%; left: 25%;}
 }
 
@@ -127,15 +128,15 @@ body {
 }
 
 @keyframes parallelogram-two-float {
-  0% {top: 100%; left: 100%; }
+  0% {top: 80%; left: 100%; }
   50% {top: 0%; left: 0%;}
-  100% {top: 100%; left: 100%;}
+  100% {top: 80%; left: 100%;}
 }
 
 @keyframes triangle-nine-float {
-  0% {bottom: 100%; right: 100%; }
-  50% {bottom: 0%; right: 0%;}
-  100% {bottom: 100%; right: 100%;}
+  0% {bottom: 80%; right: 100%; }
+  20% {bottom: 30%; right: 0%;}
+  100% {bottom: 80%; right: 100%;}
 }
 
 @keyframes triangle-two-float {
@@ -147,6 +148,7 @@ body {
   0% {  left: 0%; }
   100% { left: 100%;}
 }
+
 .triangle {
   position: absolute;
   width: 0;
@@ -156,23 +158,23 @@ body {
   border-bottom: 25px solid transparent;
 }
 .triangle-one {
-  animation: triangle-float 20s infinite ease;
+  animation: triangle-float 20s infinite linear;
 }
 
 .triangle-two {
   bottom: 20px;
-  animation: triangle-two-float 30s infinite alternate;
+  animation: triangle-two-float 30s infinite linear;
 }
 
 .triangle-three {
-  animation: triangle-three-float 40s infinite ease;
+  animation: triangle-three-float 40s infinite linear;
 }
 .triangle-four{
-  animation: parallelogram-float 60s infinite alternate;   
+  animation: parallelogram-float 60s infinite linear;   
 }
 
 .triangle-five{
-  animation: parallelogram-two-float 20s infinite ease;   
+  animation: parallelogram-two-float 20s infinite linear;   
 }
 
 .triangle-six{
@@ -180,45 +182,46 @@ body {
 }
 
 .triangle-seven{
-  animation: triangle-seven-float 60s infinite ease;   
+  animation: triangle-seven-float 60s infinite linear;   
 }
 
 .triangle-eight{
-  animation: triangle-eight-float 20s infinite alternate;   
+  animation: triangle-eight-float 20s infinite linear;   
 }
 
 .triangle-nine{
-  animation: triangle-nine-float 30s infinite ease;   
+  animation: triangle-nine-float 30s infinite linear;   
 }
 
 .triangle-ten{
   top: 25px;
-  animation: triangle-ten-float 30s infinite ease;   
+  animation: triangle-ten-float 30s infinite linear;   
 }
 
 .triangle-eleven {
    border-right: 50px solid #00FFEC;
-  animation: triangle-float 10s infinite ease; 
+  animation: triangle-float 10s infinite linear; 
 }
 
 .triangle-twelve {
    border-right: 50px solid #00FFEC;
-  animation: triangle-ten-float 10s infinite ease; 
+  animation: triangle-ten-float 10s infinite linear; 
 }
 
 .triangle-thirteen {
    border-right: 50px solid #00FFEC;
-  animation: triangle-three-float 10s infinite ease; 
+  animation: triangle-three-float 10s infinite linear; 
 }
 
 .triangle-fourteen {
+  margin-top: 100px;
    border-right: 50px solid #00FFEC;
-  animation: triangle-nine-float 10s infinite ease; 
+  animation: triangle-nine-float 10s infinite linear; 
 }
 
 .triangle-fifteen {
    border-right: 50px solid #00FFEC;
-  animation: parallelogram-two-float 10s infinite ease; 
+  animation: parallelogram-two-float 10s infinite linear; 
 }
 
 .clearfix {
@@ -351,6 +354,12 @@ p.small {
   .text-wrap {
     font-size: 1.1rem;
     line-height: 2.0rem;
+    &:hover {
+      cursor: -webkit-image-set(
+                url('../images/WW_click_2.png') 1x,
+                url('../images/WW_click_3.png') 2x
+              ), auto !important;
+    } 
   }
 }
 .text-area {
@@ -567,7 +576,6 @@ button {
     }
   }    
 }
-
 
 // .front-card {
 //   border: 3px solid black;
