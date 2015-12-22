@@ -40,55 +40,186 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
 
-@keyframes hideshow_one {
-  0% { opacity: 0; }
-  25% {opacity: 0; }
-  100% { opacity: 1; }
+// @keyframes hideshow_one {
+//   0% { opacity: 0; }
+//   25% {opacity: 0; }
+//   100% { opacity: 1; }
+// }
+
+// @keyframes hideshow_two {
+//   0% { opacity: 0; }
+//   50% {opacity: 0; }
+//   100% { opacity: 1; }
+// }
+
+// @keyframes hideshow_three {
+//   0% { opacity: 0; }
+//   50% {opacity: 0;}
+//   75% {opacity: 0; }
+//   100% { opacity: 1; }
+// }
+
+
+// @keyframes hideshow_four {
+//   0% { opacity: 0; }
+//   50% {opacity: 1;}
+// }
+
+// @keyframes hideshow_five {
+//   0% { opacity: 0; }
+//   25% {opacity: 1}
+//   50% {opacity: 0;}
+//   75% {opacity: 1;}
+//   100% {opacity: 0;}
+// }
+
+
+@keyframes triangle-float {
+  0% { top: 0%; left: 50%; }
+  25% {top: 25%; left: 75%;}
+  50% {top: 0%; left: 50%;}
+  75% {top: 25%; left: 75%;}
+  100% {top: 100%; left: 25%;}
 }
 
-@keyframes hideshow_two {
-  0% { opacity: 0; }
-  50% {opacity: 0; }
-  100% { opacity: 1; }
+@keyframes triangle-six-float {
+  0% { bottom: 0%; right: 50%; }
+  // 25% {top: 25%; left: 75%;}
+  50% {top: 50%; left: 100%;}
+  // 75% {top: 75%; left: 0%;}
+  100% {bottom: 100%; right: 25%;}
 }
 
-@keyframes hideshow_three {
-  0% { opacity: 0; }
-  50% {opacity: 0;}
-  75% {opacity: 0; }
-  100% { opacity: 1; }
+@keyframes triangle-three-float {
+  0% { top: 50%; right: 50%; }
+  25% {top: 75%; right: 75%;}
+  50% {top: 100%; right: 100%;}
+  75% {top: 0%; right: 0%;}
+  100% {top: 25%; right: 25%;}
 }
 
-
-@keyframes hideshow_four {
-  0% { opacity: 0; }
-  50% {opacity: 1;}
+@keyframes triangle-seven-float {
+  0% { bottom: 50%; left: 50%; }
+  25% {bottom: 75%; left: 0%;}
+  50% {bottom: 100%; left: 100%;}
+  75% {bottom: 0%; left: 0%;}
+  100% {bottom: 25%; left: 25%;}
 }
 
-@keyframes hideshow_five {
-  0% { opacity: 0; }
-  25% {opacity: 1}
-  50% {opacity: 0;}
-  75% {opacity: 1;}
-  100% {opacity: 0;}
+@keyframes parallelogram-float {
+  0% {top: 0%; right: 0%; }
+  50% {top: 60%; right: 50%;}
+  100% {top: 0%; right: 100%;}
 }
 
-.letter-part {
-  animation: hideshow_one 5s ease;
-}
- 
-.letter-part-two {
-  animation: hideshow_two 5s ease;
-}
-
-.letter-part-three {
-  animation: hideshow_three 3s ease;
-}
-
-.letter-part-three {
-  animation: hideshow_four 3s ease;
+@keyframes triangle-eight-float {
+  0% {bottom: 0%; left: 0%; }
+  // 10% {bottom: 10%; left: 10%;}
+  // 20% {bottom: 20%; left: 20%;}
+  // 30% {bottom: 30%; left: 30%;}
+  // 40% {bottom: 40%; left: 40%;}
+  50% {bottom: 50%; left: 50%;}
+  // 60% {bottom: 60%; left: 60%;}
+  // 70% {bottom: 70%; left: 70%;}
+  // 80% {bottom: 80%; left: 80%;}
+  // 90% {bottom: 90%; left: 90%;}
+  100% {bottom: 0%; left: 100%;}
 }
 
+@keyframes parallelogram-two-float {
+  0% {top: 100%; left: 100%; }
+  50% {top: 0%; left: 0%;}
+  100% {top: 100%; left: 100%;}
+}
+
+@keyframes triangle-nine-float {
+  0% {bottom: 100%; right: 100%; }
+  50% {bottom: 0%; right: 0%;}
+  100% {bottom: 100%; right: 100%;}
+}
+
+@keyframes triangle-two-float {
+  0% {  right: 0%; }
+  100% { right: 100%;}
+}
+
+@keyframes triangle-ten-float {
+  0% {  left: 0%; }
+  100% { left: 100%;}
+}
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid #ff6666;
+  border-bottom: 25px solid transparent;
+}
+.triangle-one {
+  animation: triangle-float 20s infinite ease;
+}
+
+.triangle-two {
+  bottom: 20px;
+  animation: triangle-two-float 30s infinite alternate;
+}
+
+.triangle-three {
+  animation: triangle-three-float 40s infinite ease;
+}
+.triangle-four{
+  animation: parallelogram-float 60s infinite alternate;   
+}
+
+.triangle-five{
+  animation: parallelogram-two-float 20s infinite ease;   
+}
+
+.triangle-six{
+  animation: triangle-six-float 30s infinite alternate;   
+}
+
+.triangle-seven{
+  animation: triangle-seven-float 60s infinite ease;   
+}
+
+.triangle-eight{
+  animation: triangle-eight-float 20s infinite alternate;   
+}
+
+.triangle-nine{
+  animation: triangle-nine-float 30s infinite ease;   
+}
+
+.triangle-ten{
+  top: 25px;
+  animation: triangle-ten-float 30s infinite ease;   
+}
+
+.triangle-eleven {
+   border-right: 50px solid #00FFEC;
+  animation: triangle-float 10s infinite ease; 
+}
+
+.triangle-twelve {
+   border-right: 50px solid #00FFEC;
+  animation: triangle-ten-float 10s infinite ease; 
+}
+
+.triangle-thirteen {
+   border-right: 50px solid #00FFEC;
+  animation: triangle-three-float 10s infinite ease; 
+}
+
+.triangle-fourteen {
+   border-right: 50px solid #00FFEC;
+  animation: triangle-nine-float 10s infinite ease; 
+}
+
+.triangle-fifteen {
+   border-right: 50px solid #00FFEC;
+  animation: parallelogram-two-float 10s infinite ease; 
+}
 
 .clearfix {
   clear: both;
@@ -151,7 +282,10 @@ h5 {
   text-transform: uppercase;
   margin: 10px 0 0 0;
 }
-
+label {
+  display: block;
+  margin: 40px 0 0;
+}
 p.small {
   font-size: .7rem;
   line-height: 1.7rem;
@@ -204,14 +338,19 @@ p.small {
   float: left;
 }
 .contact-half {
-  margin: 100px 0;
+  margin: 0;
+  text-transform: uppercase;
   p {
-    margin-top: 0;
+    margin: 0;
   }
   h2 {
-  margin: 0 50px;
+  margin: 100px 50px;
   font-size: 6.5rem;
   line-height: 9.5rem;
+  }
+  .text-wrap {
+    font-size: 1.1rem;
+    line-height: 2.0rem;
   }
 }
 .text-area {
@@ -341,6 +480,7 @@ svg {
       background-color: white;
       z-index: 75;
       .one {
+        overflow: hidden;
         border-top: none;
         border-left: 3px solid black;
         border-right: none;
@@ -361,6 +501,23 @@ svg {
   } 
 }
 
+button {
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border: 3px solid black;
+  margin: 20px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Nevis-Bold';
+  font-weight: 400;
+  background-color: #ff6666;
+  color: white;
+  &:hover {
+    cursor: pointer;
+    background-color: #00FFEC;
+  }
+}
 .four:hover {
   cursor: pointer;
   .three {
@@ -391,13 +548,13 @@ svg {
             left: 20px;
             bottom: 0px;
             cursor: auto;
-            // cursor:  url(../images/Cursor.svg) 4 12, auto;
-            cursor: url('../images/WW_click_2.png') 25 15, auto;
+            // cursor:  url(../images/Click1.png) 4 12, auto;
+            // cursor: url('../images/WW_click_2.png') 25 15, auto;
             // cursor: url('../images/WW_click_2.png'), auto !important;
-            // cursor: -webkit-image-set(
-            //     url('../images/WW_click_2.png') 1x,
-            //     url('../images/WW_click_3.png') 2x
-            //   ), auto;
+            cursor: -webkit-image-set(
+                url('../images/WW_click_2.png') 1x,
+                url('../images/WW_click_3.png') 2x
+              ), auto;
             &:hover {
               top: 0px;
               right: 0px;
@@ -570,6 +727,7 @@ a {
   text-decoration: none;
   color: black;
 }
+
 .cta {
   display: inline-block;
   color: black;
@@ -595,16 +753,36 @@ a {
   }
 }
 
-// .sidebar {
-//   background-color: black;
-//       position: fixed;
-//     right: 0;
-//     bottom: 0;
-//     top: 0;
-//     width: 39px;
-//     box-shadow: -10px 0px 31px grey;
-//     z-index: 10000;
-// }
+.cta-wrap {
+  .cta {
+    display: inline-block;
+    color: black;
+    underline: none;
+    position: relative;
+    &:after {
+      -webkit-transition: opacity 0.5s ease;
+      transition: opacity 0.5s ease;
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 50%;
+      width: 100%;
+      background: #00FFEC;
+      opacity: .5;
+    }
+  }
+  &:hover {
+    .cta {
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
 
 .sidebar-text {
   margin-left: 10px;
