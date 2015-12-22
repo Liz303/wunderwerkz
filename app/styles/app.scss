@@ -559,11 +559,11 @@ button {
             cursor: auto;
             // cursor:  url(../images/Click1.png) 4 12, auto;
             // cursor: url('../images/WW_click_2.png') 25 15, auto;
-            // cursor: url('../images/WW_click_2.png'), auto !important;
-            cursor: -webkit-image-set(
-                url('../images/WW_click_2.png') 1x,
-                url('../images/WW_click_3.png') 2x
-              ), auto;
+            cursor: url('../images/WW_click_2.png'), auto !important;
+            // cursor: -webkit-image-set(
+            //     url('../images/WW_click_2.png') 1x,
+            //     url('../images/WW_click_3.png') 2x
+            //   ), auto;
             &:hover {
               top: 0px;
               right: 0px;
@@ -633,10 +633,8 @@ button {
             ), auto;
 }
 .work-wrapper {
-  width: 2000px;
+  width: 1600px;
   height: 100%;
-  overflow: scroll;
-  position: absolute;
   top: 0;
   left: 20px;
   .image-wrap {
