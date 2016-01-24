@@ -9,6 +9,7 @@ export default Ember.Controller.extend({
   observesClicks: function() {
       Ember.run.later((function() {
         if (this.get('threeClicked') && this.get('twoClicked') && this.get('fourClicked') && this.get('stopTransition')){
+          debugger;
           this.set('stopTransition', false);
           this.set('threeClicked', false);
           this.set('twoClicked', false);
