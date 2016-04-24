@@ -4,7 +4,7 @@
       <div class="sidebar-text"> a<br>b<br>o<br>u<br>t </div>
     <div class="card contact two" {{action 'transitionToTwo'}}>
     <div class="sidebar-text">h<br>o<br>m<br>e </div>
-      <div class="card contact one" {{action 'dontTransition'}}>
+      <div class="card contact one">
         <div class="sidebar-text-one">c<br>o<br>n<br>t<br>a<br>c<br>t
         </div>
         <div class="half contact-half">
@@ -13,26 +13,24 @@
         <div class="half contact-half">
           <div class="text-wrap">
             <label> Visit </label>
-            <a href="https://www.google.com/maps/place/3350+Brighton+Blvd+%23201,+Denver,+CO+80216/@39.768559,-104.9817705,17z/data=!3m1!4b1!4m2!3m1!1s0x876c791b598178bb:0x96b114122dab0cde" class="cta-wrap" target="_blank">
-              <p class="cta"> 3350 Brighton Blvd #210 </p>
+            <a{{action 'mapLink'}} class="cta-wrap">
+              <p class="cta"> 3515 Ringsby Ct #308 </p>
               <p class="cta"> Denver, CO 80216 </p>
             </a>
             <label> Email </label>
-            <a href="mailto: jon@iheartwunderwerkz.com">
+            <a {{action 'emailLink'}}>
               <p class="cta"> JON@IHEARTWUNDERWERKZ.COM </p>
             </a>
             <label> Phone </label>
               <p> 303.594.4990 </p>
             <label> Instagram </label>
-            <div>
-            <a href="https://www.instagram.com/wunder_werkz" target="_blank">
+            <a {{action 'instaLink'}}>
               <p class="cta"> @Wunder_werkz </p>
             </a>
-            </div>
             <label> Facebook </label>
-            <a href="https://www.facebook.com/wunderwerkz" target="_blank">
+            <a {{action 'facebookLink'}}>
               <p class="cta"> /Wunderwerkz </p>
-            </a>    
+            </a>
           </div>
         </div>
 			</div>

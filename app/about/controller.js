@@ -59,6 +59,10 @@ export default Ember.Controller.extend({
         console.log('stop');
         this.set('stopTransition', true);
       }
+    },
+    downloadClick() {
+      this.set('stopTransition', true);
+      window.open('../images/Wunderwerkz_capabilities.pdf');
     }
   }
 });

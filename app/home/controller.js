@@ -1,11 +1,12 @@
 import Ember from 'ember';
+import $ from 'jquery';
 
 export default Ember.Controller.extend({
   twoClicked: false,
   threeClicked: false,
   fourClicked: false,
   polyClicked: false,
-  stopTransition: false, 
+  stopTransition: false,
 
   observesClicks: function() {
     Ember.run.later((function() {
@@ -19,7 +20,7 @@ export default Ember.Controller.extend({
         this.set('twoClicked', false);
         this.set('fourClicked', false);
         this.set('polyClicked', false);
-        if ($('.home.one').hasClass('z-hover-two')) {   
+        if ($('.home.one').hasClass('z-hover-two')) {
           $('.home.one').removeClass('z-hover-two');
         } else {
           $('.home.one').addClass('z-hover-two');

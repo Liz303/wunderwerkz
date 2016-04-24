@@ -1,4 +1,3 @@
-import { isAnimating, finish, timeSpent, animate, stop } from "liquid-fire";
 import Ember from 'ember';
 
 export default function fadeOutNewCards() {
@@ -11,5 +10,5 @@ export default function fadeOutNewCards() {
   	textFour: this.newElement.find('.four .sidebar-text').css('display', 'none'),
   	cardFive: this.oldElement.find('.four').css({'border-left': '3px solid white'}),
   	five: this.newElement.css({'left': '100%', 'opacity': 1, 'z-index': 600, 'visibility': 'visible'})
-  }); 
+  });
 }

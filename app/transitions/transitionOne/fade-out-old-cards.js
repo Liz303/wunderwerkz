@@ -1,4 +1,3 @@
-import { isAnimating, finish, timeSpent, animate, stop } from "liquid-fire";
 import Ember from 'ember';
 
 export default function fadeOutOldCards() {
@@ -7,5 +6,5 @@ export default function fadeOutOldCards() {
   	cardThree: this.oldElement.find('.three').css({'background': 'transparent', 'border-left': '3px solid transparent'}),
   	cardFour: this.oldElement.find('.four').css({'background': 'transparent', 'border-left': '3px solid transparent'}),
   	text: this.oldElement.find('.sidebar-text').css('display', 'none')
-  }); 
+  });
 }

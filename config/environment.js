@@ -19,23 +19,6 @@ module.exports = function(environment) {
     }
   };
 
-  // ENV.contentSecurityPolicy = {  
-  //   'script-src': "'self' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com maps.googleapis.com maps.gstatic.com",
-  //   'img-src': "'self' https://*.googleapis.com https://*.gstatic.com data: image/webp",
-  //   'font-src': "'self' https://*.gstatic.com",
-  //   'style-src': "'self' 'unsafe-inline' https://*.googleapis.com",
-  //   'object-src': "'self"
-  // };
-
-  ENV.contentSecurityPolicy = {
-    'default-src': "'none'",
-    'script-src': "'self' 'unsafe-eval' 'unsafe-inline' https://api.instagram.com *.googleapis.com maps.gstatic.com maps.googleapis.com maps.gstatic.com https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-core.min.js https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js",
-    'font-src': "'self' fonts.gstatic.com",
-    'connect-src': "'self' maps.gstatic.com",
-    'img-src': "'self' ak-hdl.buzzfed.com/* scontent.cdninstagram.com *.googleapis.com maps.gstatic.com csi.gstatic.com data: image/webp",
-    'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maps.gstatic.com"
-  };
-
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
