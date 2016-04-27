@@ -19,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.7.9",
     "broccoli-asset-rev": "^2.4.2",
     "broccoli-merge-trees": "^1.1.1",
     "broccoli-sass": "^0.7.0",
@@ -42,5 +43,8 @@
     "ember-resolver": "^2.0.3",
     "liquid-fire": "0.23.0",
     "loader.js": "^4.0.1"
+  },
+  "dependencies": {
+    "jshint": "^2.8.0"
   }
 }

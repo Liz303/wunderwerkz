@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 export default Ember.Controller.extend({
   twoClicked: false,
@@ -20,10 +20,10 @@ export default Ember.Controller.extend({
         this.set('twoClicked', false);
         this.set('fourClicked', false);
         this.set('polyClicked', false);
-        if ($('.home.one').hasClass('z-hover-two')) {
-          $('.home.one').removeClass('z-hover-two');
+        if (Ember.$('.home.one').hasClass('z-hover-two')) {
+          Ember.$('.home.one').removeClass('z-hover-two');
         } else {
-          $('.home.one').addClass('z-hover-two');
+          Ember.$('.home.one').addClass('z-hover-two');
         }
       } else if (this.get('threeClicked') && this.get('twoClicked') && this.get('fourClicked') ) {
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
