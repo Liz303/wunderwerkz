@@ -12,6 +12,7 @@ Router.map(function() {
   });
   this.route('contact');
   this.route('work');
+  this.route('privacypolicy');
 });
 
 export default Router;
