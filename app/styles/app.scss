@@ -20,7 +20,7 @@ body {
   font-family: 'Nevis-Bold';
   height: 100%
 }
- .four .three .two .home.one.z-hover {
+ .four .three .two .home.one.z-hover-one{
   background: url('../images/tumblr_ntpc17aqyu1u7leb2o1_400.gif') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -30,8 +30,34 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
 
+.home {
+  .sidebar-text-one {
+    color: #fff;
+    font-size: 14px;
+  }
+}
+
 .four .three .two .home.one.z-hover-two {
   background: url('../images/anigif_enhanced-buzz-16460-1373917955-9.gif') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}
+
+.four .three .two .home.one.z-hover-three {
+  background: url('../images/tumblr_myi9wwG2Gb1s6hooio1_400.gif') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}
+.four .three .two .home.one.z-hover-four {
+  background: url('../images/giphy.gif') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -381,11 +407,12 @@ p.small {
   line-height: 2.7rem;
   width: 36%;
   &:hover {
-    cursor: url('../images/WW_scroll_2.png'), auto !important;
-    cursor: -webkit-image-set(
-        url('../images/WW_scroll_2.png') 1x,
-        url('../images/WW_scroll_3.png') 2x
-      ), auto;
+    cursor: url('../images/WWclick.svg'), auto !important;
+    // cursor: url('../images/WW_scroll_2.png'), auto !important;
+    // cursor: -webkit-image-set(
+    //     url('../images/WW_scroll_2.png') 1x,
+    //     url('../images/WW_scroll_3.png') 2x
+    //   ), auto;
   }
 }
 
@@ -394,7 +421,7 @@ svg {
     top: 0;
     left: 0;
   path {
-    fill: #000;
+    fill: #FFF;
     -webkit-transition-duration: 300ms;
     -moz-transition-duration: 300ms;
     -o-transition-duration: 300ms;
@@ -636,7 +663,7 @@ button {
             ), auto;
 }
 .work-wrapper {
-  width: 1600px;
+  width: 2600px;
   height: 100%;
   top: 0;
   left: 20px;
@@ -798,14 +825,14 @@ a {
 
 
 .sidebar-text {
-  margin-left: 10px;
+  margin-left: 5px;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .sidebar-text-one {
   margin-left: 0px;
-  font-size: 10px;
+  font-size: 14px;
   text-transform: uppercase;
   float: left;
 }

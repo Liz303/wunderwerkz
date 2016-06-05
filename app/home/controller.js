@@ -22,8 +22,16 @@ export default Ember.Controller.extend({
         this.set('polyClicked', false);
         if (Ember.$('.home.one').hasClass('z-hover-two')) {
           Ember.$('.home.one').removeClass('z-hover-two');
-        } else {
+          Ember.$('.home.one').addClass('z-hover-three');
+        } else if (Ember.$('.home.one').hasClass('z-hover-one')){
+          Ember.$('.home.one').removeClass('z-hover-one');
           Ember.$('.home.one').addClass('z-hover-two');
+        } else if (Ember.$('.home.one').hasClass('z-hover-three')){
+          Ember.$('.home.one').removeClass('z-hover-three');
+          Ember.$('.home.one').addClass('z-hover-four');
+        } else if (Ember.$('.home.one').hasClass('z-hover-four')){
+          Ember.$('.home.one').removeClass('z-hover-four');
+          Ember.$('.home.one').addClass('z-hover-one');
         }
       } else if (this.get('threeClicked') && this.get('twoClicked') && this.get('fourClicked') ) {
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
