@@ -381,10 +381,7 @@ p.small {
     font-size: 1.1rem;
     line-height: 2.0rem;
     &:hover {
-      cursor: -webkit-image-set(
-                url('../images/WW_click_2.png') 1x,
-                url('../images/WW_click_3.png') 2x
-              ), auto !important;
+      cursor: url('../images/scroll.png'), auto !important;
     }
   }
 }
@@ -407,12 +404,7 @@ p.small {
   line-height: 2.7rem;
   width: 36%;
   &:hover {
-    cursor: url('../images/WWclick.svg'), auto !important;
-    // cursor: url('../images/WW_scroll_2.png'), auto !important;
-    // cursor: -webkit-image-set(
-    //     url('../images/WW_scroll_2.png') 1x,
-    //     url('../images/WW_scroll_3.png') 2x
-    //   ), auto;
+    cursor: url('../images/scroll.png'), auto !important;
   }
 }
 
@@ -586,14 +578,7 @@ button {
             right: 0;
             left: 20px;
             bottom: 0px;
-            cursor: auto;
-            // cursor:  url(../images/Click1.png) 4 12, auto;
-            // cursor: url('../images/WW_click_2.png') 25 15, auto;
-            // cursor: url('../images/WW_click_2.png'), auto !important;
-            cursor: -webkit-image-set(
-                url('../images/WW_click_2.png') 1x,
-                url('../images/WW_click_3.png') 2x
-              ), auto;
+            cursor: url('../images/clickit.png'), auto !important;
             &:hover {
               top: 0px;
               right: 0px;
@@ -656,62 +641,55 @@ button {
   width: 100%;
 }
 .inner-wrapper-2 {
-  cursor: url('../images/WW_scroll_2.png'), default !important;
- cursor: -webkit-image-set(
-              url('../images/WW_scroll_2.png') 1x,
-              url('../images/WW_scroll_3.png') 2x
-            ), auto;
+  cursor: url('../images/scroll.png'), auto !important;
 }
 .work-wrapper {
-  width: 2600px;
+  width: 26000px;
   height: 100%;
   top: 0;
   left: 20px;
+  z-index: 2;
   .image-wrap {
-    display: inline;
     position: relative;
     overflow: hidden;
     float: left;
-    width: 300px;
-    height: 300px;
-    margin-right: 100px;
+    width: auto;
+    height: 100%;
     transition-duration: 1s;
     transition-timing-function: ease;
     background-color: white;
-    padding: 50px;
+    padding: 0 50px;
     img {
-      width: 100%;
-      height: auto;
-      opacity: 1;
-      transition-duration: 0.5s;
-      transition-timing-function: ease;
-    }
-    &:hover {
-      cursor: none;
+      width: auto;
+      height: 58%;
+      margin-top: 15%;
     }
     .caption {
+      background-color: #edfdfd;
       color: black;
-      display: none;
+      // display: none;
       padding: 30px;
       font-size: 1rem;
       line-height: 1.5rem;
       position: absolute;
-      top: 0px;
+      top: 60%;
       left: 0px;
-      height: 100%;
+      height: 0%;
+      display: table;
     }
     &:hover {
-      background-color: #00FFEC;
+      // background-color: #00FFEC;
       .caption {
-        display: table;
+        height: 100%;
+        transition: height 5s ease-in-out;
         .caption-text {
-          display: table-cell;
+          // display: table-cell;
           vertical-align: middle;
         }
       }
-      img {
-        opacity: 0;
-      }
+      // img {
+      //   opacity: 0;
+      // }
     }
 
   }
@@ -721,13 +699,19 @@ button {
   position: fixed;
   width: 240px;
   bottom: 50%;
-  right: 20px;
-  z-index: 100;
+  right: 00px;
+  z-index: 113;
   text-align: right;
-  opacity: 1;
+  /* opacity: 1; */
+  background: black;
+  color: white;
   h5 {
     text-transform: lowercase;
     line-height: 2rem;
+    color: white;
+    font-size: 27px;
+    top: 0px;
+    position: fixed;
   }
   &:hover {
     opacity: 0;
@@ -1033,10 +1017,6 @@ div {
   }
   &:hover {
     background-color: #FFF;
-    cursor: url('../images/WW_scroll_2.png'), auto !important;
-    cursor: -webkit-image-set(
-        url('../images/WW_scroll_2.png') 1x,
-        url('../images/WW_scroll_3.png') 2x
-      ), auto;
+    cursor: url('../images/scroll.png'), auto !important;
   }
 }
