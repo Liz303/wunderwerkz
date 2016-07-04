@@ -175,6 +175,14 @@ body {
   100% { left: 100%;}
 }
 
+@keyframes link-color {
+  0%   {color: red;}
+  25%  {color: yellow;}
+  50%  {color: blue;}
+  100% {color: green;}
+}
+
+
 .triangle {
   position: absolute;
   width: 0;
@@ -356,10 +364,17 @@ p.small {
       color: black;
     }
   }
-  p.small {
-    padding: 0 0 50px 0;
+  .waves-link {
+    font-size: 0.8em;
+    text-decoration: underline;
+    width: 90%;
+    margin: 10px auto 50px auto;
+    a {
+      animation: link-color 5s infinite alternate;
+    }
   }
 }
+
 
 .half {
   width: 49.5%;
@@ -380,9 +395,7 @@ p.small {
   .text-wrap {
     font-size: 1.1rem;
     line-height: 2.0rem;
-    &:hover {
-      cursor: url('../images/WW_site_click-01.png'), auto !important;
-    }
+    cursor: url('../images/scroll.png'), auto !important;
   }
 }
 .text-area {
@@ -578,7 +591,7 @@ button {
             right: 0;
             left: 20px;
             bottom: 0px;
-            cursor: url('../images/WW_site_click-01.png'), auto !important;
+            cursor: url('../images/test.png'), auto !important;
             &:hover {
               top: 0px;
               right: 0px;
@@ -641,7 +654,7 @@ button {
   width: 100%;
 }
 .inner-wrapper-2 {
- cursor: url('../images/WW_site_scroll-01.png'), auto !important;
+ cursor: url('../images/scroll.png'), auto !important;
 }
 .work-wrapper {
   width: 26000px;
@@ -825,6 +838,12 @@ a {
   display: none;
 }
 @media (max-width: 480px) {
+  .hide-phone {
+    display: none;
+  }
+  .show-phone {
+    display: block;
+  }
   .four {
     left: 3px;
     .three {
@@ -1017,6 +1036,6 @@ div {
   }
   &:hover {
     background-color: #FFF;
-    cursor: url('../images/WW_site_scroll-01.png'), auto !important;
+    cursor: url('../images/scroll.png'), auto !important;
   }
 }

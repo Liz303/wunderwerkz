@@ -69,11 +69,15 @@ export default Ember.Controller.extend({
     },
     facebookLink() {
       this.set('stopTransition', true);
-      window.opwn("https://www.facebook.com/wunderwerkz");
+      window.open("https://www.facebook.com/wunderwerkz");
     },
     emailLink() {
       this.set('stopTransition', true);
       window.location.href = "mailto:jon@iheartwunderwerkz.com";
+    },
+    behanceLink() {
+      this.set('stopTransition', true);
+      window.open("https://www.behance.net/wunder_werkz");
     }
   }
 });
