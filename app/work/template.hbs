@@ -6,15 +6,19 @@
     <div class="sidebar-text">c<br>o<br>n<br>t<br>a<br>c<br>t</div>
       <div class="card work one" {{action 'dontTransition'}}>
         <div class="inner-wrapper-2 scroll">
-          <div class="sidebar-text-one">w<br>o<br>r<br>k</div>
+          <div class="sidebar-text-one"
+              style="
+                position: absolute;
+                left: 11px;
+                top: 0;
+                z-index: 999;">
+                w<br>o<br>r<br>k
+          </div>
           <div class="work-text">
             <h5> some stuff we're doing at @wunder_werkz</h5>
-
           </div>
-
           <div class="work-wrapper">
-            <div class="work-wrapper">
-              {{#each model as |image|}}
+            {{#each model as |image|}}
               <div class="image-wrap">
                 <img src={{image.file}} />
                 <div class="caption">
@@ -23,54 +27,7 @@
                   </div>
                 </div>
               </div>
-              {{/each}}
-              <div class="image-wrap">
-                <img src="/images/Portfoliophotos/Common_Area_2.JPG" />
-                <div class="caption">
-                  <div class="caption-text">
-                    The Source common area
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-wrap">
-                <img src="/images/Portfoliophotos/yatch_club.png" />
-                <div class="caption">
-                  <div class="caption-text">
-                    Yatch Club Collateral
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-wrap">
-                <img src="/images/Portfoliophotos/the_woods.png" />
-                <div class="caption">
-                  <div class="caption-text">
-                    Yatch Club Collateral
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-wrap">
-                <img src="/images/Portfoliophotos/letter_f.png" />
-                <div class="caption">
-                  <div class="caption-text">
-                    Yatch Club Collateral
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-wrap">
-                <img src="/images/Portfoliophotos/waveszine_iceland.png" />
-                <div class="caption">
-                  <div class="caption-text">
-                    Yatch Club Collateral
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
+            {{/each}}
           </div>
         </div>
       </div>

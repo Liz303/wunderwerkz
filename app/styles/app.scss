@@ -381,7 +381,7 @@ p.small {
     font-size: 1.1rem;
     line-height: 2.0rem;
     &:hover {
-      cursor: url('../images/scroll.png'), auto !important;
+      cursor: url('../images/WW_site_click-01.png'), auto !important;
     }
   }
 }
@@ -404,7 +404,7 @@ p.small {
   line-height: 2.7rem;
   width: 36%;
   &:hover {
-    cursor: url('../images/scroll.png'), auto !important;
+    cursor: url('../images/WW_site_click-01.png'), auto !important;
   }
 }
 
@@ -578,7 +578,7 @@ button {
             right: 0;
             left: 20px;
             bottom: 0px;
-            cursor: url('../images/clickit.png'), auto !important;
+            cursor: url('../images/WW_site_click-01.png'), auto !important;
             &:hover {
               top: 0px;
               right: 0px;
@@ -604,7 +604,7 @@ button {
 //   transition-duration: .2s;
 //   transition-timing-function: ease;
 //   background-color: white;
-//   cursor: url('../images/WW_click_2.png'), default;
+//   cursor: url('../images/WW_site_click-01.png'), default;
 //   &:hover {
 //     top: 48px;
 //     left: 40px;
@@ -641,7 +641,7 @@ button {
   width: 100%;
 }
 .inner-wrapper-2 {
-  cursor: url('../images/scroll.png'), auto !important;
+ cursor: url('../images/WW_site_scroll-01.png'), auto !important;
 }
 .work-wrapper {
   width: 26000px;
@@ -1017,6 +1017,6 @@ div {
   }
   &:hover {
     background-color: #FFF;
-    cursor: url('../images/scroll.png'), auto !important;
+    cursor: url('../images/WW_site_scroll-01.png'), auto !important;
   }
 }
