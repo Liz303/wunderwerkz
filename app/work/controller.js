@@ -63,10 +63,6 @@ export default Ember.Controller.extend({
         console.log('stop');
         this.set('stopTransition', true);
       }
-    },
-    // scrollRight(e, delta) {
-    // $('.work-wrapper').scrollLeft -= (e.deltaY * 30);
-    //   e.preventDefault();
-    // }
+    }
   }
 });
