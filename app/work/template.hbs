@@ -17,15 +17,10 @@
           <div class="work-text">
             <h5> some stuff we're doing at @wunder_werkz</h5>
           </div>
-          <div class="work-wrapper">
+          <div class="work-wrapper" style={{containerStyle}}>
             {{#each model as |image|}}
-              <div class="image-wrap">
+              <div class="image-wrap" style={{image.position}}>
                 <img src={{image.file}} />
-                <div class="caption">
-                  <div class="caption-text">
-                    {{image.name}}
-                  </div>
-                </div>
               </div>
             {{/each}}
           </div>

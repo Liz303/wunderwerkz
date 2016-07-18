@@ -7,6 +7,14 @@ export default Ember.Controller.extend({
   fourClicked: false,
   stopTransition: false,
 
+  containerStyle: function() {
+    let winHeight = $(window).height();
+    let winWidth = $(window).width();
+    let docuWidth = winWidth * 2;
+    let docuHeight = winHeight * 2;
+    return 'width:'+ docuWidth + 'px;' + 'height:' + docuHeight + 'px;';
+  }.property(),
+
   observesClicks: function() {
     Ember.run.later((function() {
       if (this.get('threeClicked') && this.get('twoClicked') && this.get('fourClicked') && this.get('stopTransition')){

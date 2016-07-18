@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  imageArray: [],
+  docHeight: $(window).height() * 2,
+  docWidth: $(window).width() * 2,
+
   model() {
     let images = [
       { "name": "The Source",
@@ -41,5 +45,55 @@ export default Ember.Route.extend({
         "file": "/images/Portfoliophotos/yatchclubshirt.png" },
     ];
     return images;
+  },
+
+  setupController: function(controller, model) {
+    this._super(controller, model);
+
+    model.forEach(function(image, i){
+      let imagePos = this.getImagePos();
+      if (this.imageArray.length > 0) {
+        while (this.checkForOverLap(imagePos)) {
+          imagePos = this.getImagePos();
+        }
+        this.imageArray.push(imagePos);
+        image.position = 'left:' + imagePos.left.toString() + 'px;' + 'top:' + imagePos.top.toString() + 'px;';
+      } else {
+        this.imageArray.push(imagePos);
+        image.position = 'left:' + imagePos.left.toString() + 'px;' + 'top:' + imagePos.top.toString() + 'px;';
+      }
+      // console.log(arrayObj);
+    }.bind(this));
+
+  },
+
+  getImagePos: function() {
+    let top = this.generateNumber(this.docHeight, 1);
+    let left = this.generateNumber(this.docWidth, 1);
+    let arrayObj = {};
+    arrayObj.top = top;
+    arrayObj.left = left;
+    return arrayObj;
+  },
+
+  checkForOverLap(imagePos) {
+    for (var i=0; i < this.imageArray.length; i++) {
+      let imageTop = this.imageArray[i].top;
+      let imageLeft = this.imageArray[i].left;
+
+      let inParentRangeTop = (imagePos.top >= imageTop) &&  (imagePos.top <= (imageTop + 300));
+      let parentInRangeTop = (((imagePos.top + 300) >= imageTop) && ((imagePos.top + 300) <= (imageTop + 300)));
+      let inParentRangeLeft = (imagePos.left >= imageLeft) &&  (imagePos.left <= (imageLeft + 300));
+      let parentInRangeLeft = (((imagePos.left + 300) >= imageLeft) && ((imagePos.left + 300) <= (imageLeft + 300)));
+      if ((inParentRangeTop || parentInRangeTop) && (inParentRangeLeft || parentInRangeLeft)) {
+        console.log('overlaps');
+        return true;
+      }
+    }
+    return false;
+  },
+
+  generateNumber: function(max, min) {
+    return Math.floor(Math.random() * max) + min;
   }
 });

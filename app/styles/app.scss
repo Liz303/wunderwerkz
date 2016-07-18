@@ -417,7 +417,7 @@ p.small {
   line-height: 2.7rem;
   width: 36%;
   &:hover {
-    cursor: url('../images/test.png'), auto !important;
+    cursor: url('../images/WW_site_click-01.png'), auto !important;
   }
 }
 
@@ -657,24 +657,27 @@ button {
  cursor: url('../images/scroll.png'), auto !important;
 }
 .work-wrapper {
-  width: 26000px;
-  height: 100%;
+  // width: 26000px;
+  // height: 100%;
+  position: relative;
   top: 0;
   left: 20px;
   z-index: 2;
   .image-wrap {
-    position: relative;
-    overflow: hidden;
-    float: left;
-    width: auto;
-    height: 100%;
-    transition-duration: 1s;
-    transition-timing-function: ease;
-    background-color: white;
-    padding: 0 50px;
+    position: absolute;
+    // position: relative;
+    // overflow: hidden;
+    // float: left;
+    // width: auto;
+    // height: 100%;
+    // transition-duration: 1s;
+    // transition-timing-function: ease;
+    // background-color: white;
+    // padding: 0 50px;
     img {
       width: auto;
-      height: 58%;
+      height: 100%;
+      max-height: 300px;
       margin-top: 15%;
     }
     .caption {
