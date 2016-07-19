@@ -268,7 +268,7 @@ p.small {
 
 
 .half {
-  width: 49.5%;
+  width: 47.5%;
   height: 100%;
   float: left;
 }
@@ -279,7 +279,7 @@ p.small {
     margin: 0;
   }
   h2 {
-  margin: 100px 50px;
+  margin: 28px 50px;
   font-size: 6.5rem;
   line-height: 9.5rem;
   }
@@ -412,7 +412,7 @@ svg {
       background-color: white;
       z-index: 75;
       .one {
-        overflow: hidden;
+        overflow: scroll;
         border-top: none;
         border-left: 3px solid black;
         border-right: none;
@@ -726,6 +726,11 @@ a {
   font-size: 14px;
   text-transform: uppercase;
   float: left;
+  font-size: 14px;
+  text-transform: uppercase;
+  float: left;
+  position: fixed;
+  top: 2px;
 }
 
 .phone-text {
@@ -747,7 +752,6 @@ a {
         .one {
           left: 3px;
         &.about {
-          background-color: #00FFEC;
           height: 100%;
           overflow: scroll;
           }
@@ -779,11 +783,12 @@ a {
      background-color: #FFFFFF;
   }
   .half {
-      width: 100%;
-      background-color: #00FFEC;
-      float: none;
-      height: auto;
-    }
+    width: 94%;
+    background-color: #00FFEC;
+    float: right;
+    height: auto;
+    margin: 20px 0;
+  }
   h2 {
     margin-top: 100px;
     font-size: 3rem;
@@ -854,7 +859,6 @@ a {
     }
   }
   .four .three .two .one.about {
-    background-color: #00FFEC;
     height: 100%;
     overflow: scroll;
   }
@@ -862,10 +866,11 @@ a {
      background-color: #FFFFFF;
   }
   .half {
-      width: 100%;
+      width: 92%;
       background-color: #00FFEC;
       float: none;
       height: auto;
+      margin-left: 11%;
     }
   h2 {
     margin-top: 100px;

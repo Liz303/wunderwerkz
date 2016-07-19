@@ -87,7 +87,6 @@ export default Ember.Route.extend({
       let inParentRangeLeft = (imagePos.left >= imageLeft) &&  (imagePos.left <= (imageLeft + 300));
       let parentInRangeLeft = (((imagePos.left + 300) >= imageLeft) && ((imagePos.left + 300) <= (imageLeft + 300)));
       if ((inParentRangeTop || parentInRangeTop) && (inParentRangeLeft || parentInRangeLeft)) {
-        console.log('overlaps');
         return true;
       }
     }
