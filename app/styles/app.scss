@@ -66,115 +66,6 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
 
-// @keyframes hideshow_one {
-//   0% { opacity: 0; }
-//   25% {opacity: 0; }
-//   100% { opacity: 1; }
-// }
-
-// @keyframes hideshow_two {
-//   0% { opacity: 0; }
-//   50% {opacity: 0; }
-//   100% { opacity: 1; }
-// }
-
-// @keyframes hideshow_three {
-//   0% { opacity: 0; }
-//   50% {opacity: 0;}
-//   75% {opacity: 0; }
-//   100% { opacity: 1; }
-// }
-
-
-// @keyframes hideshow_four {
-//   0% { opacity: 0; }
-//   50% {opacity: 1;}
-// }
-
-// @keyframes hideshow_five {
-//   0% { opacity: 0; }
-//   25% {opacity: 1}
-//   50% {opacity: 0;}
-//   75% {opacity: 1;}
-//   100% {opacity: 0;}
-// }
-
-
-@keyframes triangle-float {
-  0% { top: 0%; left: 50%; }
-  25% {top: 25%; left: 75%;}
-  50% {top: 0%; left: 50%;}
-  75% {top: 25%; left: 75%;}
-  100% {top: 100%; left: 25%;}
-}
-
-@keyframes triangle-six-float {
-  0% { bottom: 0%; right: 50%; }
-  // 25% {top: 25%; left: 75%;}
-  50% {top: 50%; left: 100%;}
-  // 75% {top: 75%; left: 0%;}
-  100% {bottom: 100%; right: 25%;}
-}
-
-@keyframes triangle-three-float {
-  0% { top: 50%; right: 50%; }
-  25% {top: 75%; right: 75%;}
-  50% {top: 100%; right: 100%;}
-  75% {top:  50%; right: 22%;}
-  100% {top: 25%; right: 25%;}
-}
-
-@keyframes triangle-seven-float {
-  0% { bottom: 50%; left: 50%; }
-  20% {bottom: 25%; left: 0%;}
-  40% {bottom: 50%; left: 100%;}
-  60% {bottom: 25%; left: 0%;}
-  80%  {bottom: 50%; left: 50%;}
-  100% {bottom: 25%; left: 25%;}
-}
-
-@keyframes parallelogram-float {
-  0% {top: 0%; right: 0%; }
-  50% {top: 60%; right: 50%;}
-  100% {top: 0%; right: 100%;}
-}
-
-@keyframes triangle-eight-float {
-  0% {bottom: 0%; left: 0%; }
-  // 10% {bottom: 10%; left: 10%;}
-  // 20% {bottom: 20%; left: 20%;}
-  // 30% {bottom: 30%; left: 30%;}
-  // 40% {bottom: 40%; left: 40%;}
-  50% {bottom: 50%; left: 50%;}
-  // 60% {bottom: 60%; left: 60%;}
-  // 70% {bottom: 70%; left: 70%;}
-  // 80% {bottom: 80%; left: 80%;}
-  // 90% {bottom: 90%; left: 90%;}
-  100% {bottom: 0%; left: 100%;}
-}
-
-@keyframes parallelogram-two-float {
-  0% {top: 80%; left: 100%; }
-  50% {top: 0%; left: 0%;}
-  100% {top: 80%; left: 100%;}
-}
-
-@keyframes triangle-nine-float {
-  0% {bottom: 80%; right: 100%; }
-  20% {bottom: 30%; right: 0%;}
-  100% {bottom: 80%; right: 100%;}
-}
-
-@keyframes triangle-two-float {
-  0% {  right: 0%; }
-  100% { right: 100%;}
-}
-
-@keyframes triangle-ten-float {
-  0% {  left: 0%; }
-  100% { left: 100%;}
-}
-
 @keyframes link-color {
   0%   {color: red;}
   25%  {color: yellow;}
@@ -713,25 +604,25 @@ button {
 
 .work-text {
   position: fixed;
-  width: 240px;
-  bottom: 50%;
-  right: 00px;
+  width: 341px;
+  top: 2%;
+  right: 20%;
   z-index: 113;
-  text-align: right;
   /* opacity: 1; */
-  background: black;
+  /* background: black; */
+  height: 200px;
   color: white;
+  padding: 0px 0px 20px 20px;
+  text-align: right;
+
   h5 {
     text-transform: lowercase;
-    line-height: 2rem;
+    line-height: 3rem;
     color: white;
-    font-size: 27px;
-    top: 0px;
-    position: fixed;
-  }
-  &:hover {
-    opacity: 0;
-    cursor: none;
+    animation: link-color 5s infinite alternate;
+    margin-top: 0px;
+    font-size: 39px;
+    padding: 45px 20px 20px;
   }
 }
 

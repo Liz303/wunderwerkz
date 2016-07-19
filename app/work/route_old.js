@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   imageArray: [],
-  docHeight: 1024 * 2,
-  docWidth: 1280 * 2,
+  docHeight: $(window).height() * 2,
+  docWidth: $(window).width() * 2,
 
   model() {
     let images = [
@@ -51,19 +51,10 @@ export default Ember.Route.extend({
     this._super(controller, model);
 
     model.forEach(function(image, i){
-      let imagePos = this.getImagePos();
-      if (this.imageArray.length > 0) {
-        let count = 0;
-        while (this.checkForOverLap(imagePos) && count < 40) {
-          count ++;
-          imagePos = this.getImagePos();
-        }
-        this.imageArray.push(imagePos);
-        image.position = 'left:' + imagePos.left.toString() + 'px;' + 'top:' + imagePos.top.toString() + 'px;';
-      } else {
-        this.imageArray.push(imagePos);
-        image.position = 'left:' + imagePos.left.toString() + 'px;' + 'top:' + imagePos.top.toString() + 'px;';
-      }
+      let arrayObj = this.getImagePos();
+      this.imageArray.push(arrayObj);
+      image.position = 'left:' + arrayObj.left.toString() + 'px;' + 'top:' + arrayObj.top.toString() + 'px;';
+      // console.log(arrayObj);
     }.bind(this));
 
   },
@@ -74,24 +65,51 @@ export default Ember.Route.extend({
     let arrayObj = {};
     arrayObj.top = top;
     arrayObj.left = left;
+    console.log('get image position: { ' + top + ', ' + left + '}');
+    for (var i=0; i < this.imageArray.length; i++) {
+      var imageTop = this.imageArray[i].top;
+      var imageLeft = this.imageArray[i].left;
+      let overlap = this.checkForOverLap(top, imageTop, left, imageLeft);
+      console.log('overlap: ', overlap);
+      while ( this.checkForOverLap(top, imageTop, left, imageLeft) ) {
+        console.log('in whilte');
+        left = this.generateNumber(this.docWidth, 1);
+        console.log('new left : { ' + top + ', ' + left + '}');
+      }
+      arrayObj.left = left;
+      console.log('this is what is put in the array: ', arrayObj);
+      return arrayObj;
+      // if ( overlap ) {
+      //     left = left + 350;
+      //     top = top + 350;
+      //     arrayObj.left = left;
+      //     console.log('updated pos ', arrayObj)
+      //     let overlap = this.checkForOverLap(top, imageTop, left, imageLeft);
+      //     if ( overlap ) {
+      //       left = left + 350;
+      //       top = top + 350;
+      //       arrayObj.left = left;
+      //       return arrayObj;
+      //     }
+      //     console.log('overlap',overlap);
+      //     return arrayObj;
+      // }
+    }
+    console.log('this is what is put in the array: ', arrayObj);
     return arrayObj;
   },
 
-  checkForOverLap(imagePos) {
-    for (var i=0; i < this.imageArray.length; i++) {
-      let imageTop = this.imageArray[i].top;
-      let imageLeft = this.imageArray[i].left;
-
-      let inParentRangeTop = (imagePos.top >= imageTop) &&  (imagePos.top <= (imageTop + 300));
-      let parentInRangeTop = (((imagePos.top + 300) >= imageTop) && ((imagePos.top + 300) <= (imageTop + 300)));
-      let inParentRangeLeft = (imagePos.left >= imageLeft) &&  (imagePos.left <= (imageLeft + 300));
-      let parentInRangeLeft = (((imagePos.left + 300) >= imageLeft) && ((imagePos.left + 300) <= (imageLeft + 300)));
-      if ((inParentRangeTop || parentInRangeTop) && (inParentRangeLeft || parentInRangeLeft)) {
-        console.log('overlaps');
-        return true;
-      }
+  checkForOverLap(top, imageTop, left, imageLeft) {
+    let inParentRangeTop = (top >= imageTop) &&  (top <= (imageTop + 300));
+    let parentInRangeTop = (((top + 300) >= imageTop) && ((top + 300) <= (imageTop + 300)));
+    let inParentRangeLeft = (left >= imageLeft) &&  (left <= (imageLeft + 300));
+    let parentInRangeLeft = (((left + 300) >= imageLeft) && ((left + 300) <= (imageLeft + 300)));
+    debugger;
+    if ((inParentRangeTop || parentInRangeTop) && (inParentRangeLeft || parentInRangeLeft)) {
+      return true;
+    } else {
+      return false;
     }
-    return false;
   },
 
   generateNumber: function(max, min) {
