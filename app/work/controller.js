@@ -66,6 +66,10 @@ export default Ember.Controller.extend({
     transitionToFour() {
       this.set('fourClicked', true);
     },
+    instaLink() {
+      this.set('stopTransition', true);
+      window.open("https://www.instagram.com/wunder_werkz/");
+    },
     dontTransition() {
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         console.log('stop');

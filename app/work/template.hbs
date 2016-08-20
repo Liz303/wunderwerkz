@@ -14,10 +14,8 @@
                 z-index: 999;">
                 w<br>o<br>r<br>k
           </div>
-          <div class="work-text">
-            <a href="https://www.instagram.com/wunder_werkz/">
-              <h5> some stuff we're doing at @wunder_werkz</h5>
-            </a>
+          <div class="work-text" {{action 'instaLink'}}>
+            <h5> some stuff we're doing at @wunder_werkz</h5>
           </div>
           <div class="work-wrapper" style={{containerStyle}}>
             {{#each model as |image|}}

@@ -56,9 +56,12 @@ export default Ember.Controller.extend({
     },
     dontTransition() {
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        console.log('stop');
         this.set('stopTransition', true);
       }
+    },
+    zineLink() {
+      this.set('stopTransition', true);
+      window.open("https://www.etsy.com/shop/WavesZine");
     },
     downloadClick() {
       this.set('stopTransition', true);

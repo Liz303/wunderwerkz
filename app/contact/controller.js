@@ -73,7 +73,7 @@ export default Ember.Controller.extend({
     },
     emailLink() {
       this.set('stopTransition', true);
-      window.location.href = "mailto:jon@iheartwunderwerkz.com";
+      window.location.href = "mailto:hello@iheartwunderwerkz.com";
     },
     behanceLink() {
       this.set('stopTransition', true);

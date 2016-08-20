@@ -260,8 +260,9 @@ p.small {
     text-decoration: underline;
     width: 90%;
     margin: 10px auto 50px auto;
-    a {
-      animation: link-color 5s infinite alternate;
+    animation: link-color 5s infinite alternate;
+    &:hover {
+      cursor: pointer;
     }
   }
 }
@@ -623,6 +624,9 @@ button {
     margin-top: 0px;
     font-size: 39px;
     padding: 45px 20px 20px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
