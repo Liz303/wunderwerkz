@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
     let winHeight = $(window).height();
     let winWidth = $(window).width();
     let docuWidth = winWidth * 2;
-    let docuHeight = winHeight * 2;
+    let docuHeight = winHeight * 1.5;
     return 'width:'+ docuWidth + 'px;' + 'height:' + docuHeight + 'px;';
   }.property(),
 

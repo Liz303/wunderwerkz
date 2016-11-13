@@ -26,6 +26,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  display: flex;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
@@ -43,6 +44,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  display: flex;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
@@ -53,6 +55,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  display: flex;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
@@ -62,6 +65,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  display: flex;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
@@ -238,16 +242,24 @@ p.small {
   background-color: #00FFEC;
   transition-duration: 1s;
   transition-timing-function: ease;
+  display: flex;
+  justify-content: center;
   h2 {
+    align-self: center;
+    height: 74%;
     color: white;
-    padding-left: 20px;
-    position: fixed;
-    width: 45%;
+    width: 94%;
     left: 80px;
+    font-size: 110px;
+    line-height: 150px;
+    margin-top: 2%;
   }
   p {
     color: white;
     padding: 0;
+  }
+  h5 {
+    color: white;
   }
   &:hover {
     background-color: white;
@@ -257,11 +269,14 @@ p.small {
     p {
       color: black;
     }
+    h5 {
+      color: black;
+    }
   }
   .waves-link {
     font-size: 1.5vw;
     text-decoration: underline;
-    width: 90%;
+    width: 100%;
     margin: 10px auto 50px auto;
     animation: link-color 5s infinite alternate;
     &:hover {
@@ -272,17 +287,25 @@ p.small {
 
 
 .half {
-  width: 50%;
+  width: calc(50% - 16px);
   height: 100%;
   float: left;
+  margin-left: 16px;
+  &:last-child {
+    margin-left: 0px;
+  }
 }
 .contact-half {
   margin: 0;
+  display: flex;
+  justify-content: center;
   text-transform: uppercase;
   p {
     margin: 0;
   }
   h2 {
+  align-self: center;
+  height: 66%;
   margin: 28px 50px;
   font-size: 6.5rem;
   line-height: 9.5rem;
@@ -304,19 +327,31 @@ p.small {
 }
 
 .text-wrap {
-  overflow: scroll;
+  overflow: hidden;
   position: absolute;
-  height: 100%;
-  padding: 25px 25px 0px 5%;
+  height: 96%;
   font-size: 4vh;
   line-height: 6vh;
-  width: 46%;
+  width: 34%;
   &:hover {
     cursor: url('../images/WW_site_click-01.png'), auto !important;
+    button {
+      background-color: black;
+      border: 3px solid black;
+      &:hover {
+        background-color: white;
+        border: 3px solid black;
+        color: black;
+      }
+    }
   }
 }
 .scrollable-area {
-  width: 72%;
+  width: 100%;
+  padding-right: 28%;
+  overflow: scroll;
+  overflow-x: visible;
+  overflow-y: scroll;
 }
 
 svg {
@@ -354,15 +389,12 @@ svg {
 }
 
 .svg-container {
-  width: 80%;
+  width: 100%;
   height: 50%;
   overflow: auto;
   margin: auto;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  align-self: center;
 }
 .liquid-container {
   position: absolute;
@@ -444,17 +476,19 @@ button {
   width: 100%;
   padding: 20px;
   background-color: white;
-  border: 3px solid black;
-  margin: 20px 0;
+  border: 3px solid white;
+  margin: 20px 0 0 0;
   font-size: 20px;
   text-transform: uppercase;
   font-family: 'Nevis-Bold';
   font-weight: 400;
-  background-color: #ff6666;
-  color: white;
+  background-color: #00FFEC;
+  color: #FFF;
   &:hover {
     cursor: pointer;
-    background-color: #00FFEC;
+    border: 3px solid #000;
+    background-color: #000;
+    color: #000;
   }
   &:focus {
     outline: none;
