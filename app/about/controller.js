@@ -61,7 +61,7 @@ export default Ember.Controller.extend({
     },
     zineLink() {
       this.set('stopTransition', true);
-      window.open("https://www.etsy.com/shop/WavesZine");
+      window.open("http://wearewav.es/");
     },
     downloadClick() {
       this.set('stopTransition', true);

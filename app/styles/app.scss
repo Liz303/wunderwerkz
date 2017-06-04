@@ -289,6 +289,7 @@ p.small {
 .half {
   width: calc(50% - 16px);
   height: 100%;
+  overflow: scroll;
   float: left;
   margin-left: 16px;
   &:last-child {
@@ -311,7 +312,7 @@ p.small {
   line-height: 9.5rem;
   }
   .text-wrap {
-    font-size: 4vh;
+    font-size: 2vw;
     line-height: 7vh;
     cursor: url('../images/scroll.png'), auto !important;
   }
@@ -328,11 +329,10 @@ p.small {
 
 .text-wrap {
   overflow: hidden;
-  position: absolute;
   height: 96%;
   font-size: 4vh;
   line-height: 6vh;
-  width: 34%;
+  width: 94%;
   &:hover {
     cursor: url('../images/WW_site_click-01.png'), auto !important;
     button {
@@ -357,7 +357,7 @@ p.small {
 svg {
   position: absolute;
     top: 0;
-    left: 0;
+    left: -35px;
   path {
     fill: #FFF;
     -webkit-transition-duration: 300ms;
@@ -390,7 +390,8 @@ svg {
 
 .svg-container {
   width: 100%;
-  height: 50%;
+  // height: 50%;
+  top: calc(50% - 140px);
   overflow: auto;
   margin: auto;
   position: absolute;
@@ -787,6 +788,7 @@ a {
   }
   .show-phone {
     display: block !important;
+    overflow: scroll;
     padding: 20px;
     div {
       height: auto;
@@ -901,6 +903,9 @@ a {
 }
 
 @media (max-width: 768px) {
+  div.card.contact.one {
+    overflow: scroll;
+  }
   .four:hover {
     .three {
       left: 10px;
@@ -929,11 +934,13 @@ a {
      background-color: #FFFFFF;
   }
   .half {
-      width: 92%;
+      width: 100%;
       background-color: #00FFEC;
       float: none;
       height: auto;
-      margin-left: 11%;
+      &:hover {
+        background: #FFFFFF;
+      }
     }
   h2 {
     margin-top: 100px;
@@ -1021,6 +1028,7 @@ div {
   }
   .show-phone {
     display: block !important;
+    overflow: scroll;
   }
 }
 
@@ -1041,6 +1049,7 @@ div {
   }
   .show-phone {
     display: block !important;
+    overflow: scroll;
   }
 }
 
@@ -1055,6 +1064,7 @@ div {
   }
   .show-phone {
     display: block !important;
+    overflow: scroll;
   }
 }
 
@@ -1072,5 +1082,6 @@ div {
   }
   .show-phone {
     display: block !important;
+    overflow: scroll;
   }
 }
