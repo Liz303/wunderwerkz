@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "ember build",
+    "prestart": "next build",
     "start": "ember server",
     "test": "ember test"
   },
