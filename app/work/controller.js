@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import $ from 'jquery';
 
 export default Ember.Controller.extend({
   twoClicked: false,
@@ -8,8 +7,8 @@ export default Ember.Controller.extend({
   stopTransition: false,
 
   containerStyle: function() {
-    let winHeight = $(window).height();
-    let winWidth = $(window).width();
+    let winHeight = Ember.$(window).height();
+    let winWidth = Ember.$(window).width();
     let docuWidth = winWidth * 2;
     let docuHeight = winHeight * 1.5;
     return 'width:'+ docuWidth + 'px;' + 'height:' + docuHeight + 'px;';
@@ -26,7 +25,7 @@ export default Ember.Controller.extend({
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
           this.transitionToRoute('contact');
         } else {
-        $('.work-text').css('position', 'absolute');
+        Ember.$('.work-text').css('position', 'absolute');
         this.set('threeClicked', false);
         this.set('twoClicked', false);
         this.set('fourClicked', false);
@@ -36,7 +35,7 @@ export default Ember.Controller.extend({
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
           this.transitionToRoute('contact');
         } else {
-          $('.work-text').css('position', 'absolute');
+          Ember.$('.work-text').css('position', 'absolute');
           this.set('threeClicked', false);
           this.set('twoClicked', false);
           this.set('fourClicked', false);
@@ -46,7 +45,7 @@ export default Ember.Controller.extend({
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
           this.transitionToRoute('contact');
         } else {
-          $('.work-text').css('position', 'absolute');
+            Ember.$('.work-text').css('position', 'absolute');
           this.set('threeClicked', false);
           this.set('twoClicked', false);
           this.set('fourClicked', false);

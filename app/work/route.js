@@ -56,7 +56,7 @@ export default Ember.Route.extend({
   setupController: function(controller, model) {
     this._super(controller, model);
 
-    model.forEach(function(image, i){
+    model.forEach(function(image){
       let imagePos = this.getImagePos();
 
       if (this.imageArray.length > 0) {
